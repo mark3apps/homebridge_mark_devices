@@ -1,0 +1,2882 @@
+[
+    {
+        "aid": 1,
+        "iid": 2000000008,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "Homebridge 6E6C 2448",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 9,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "Homebridge 6E6C 2448",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "homebridge.io",
+            "Model": "homebridge",
+            "Name": "Homebridge 6E6C 2448",
+            "Serial Number": "0E:CC:78:46:6E:6C",
+            "Firmware Revision": "1.5.0"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "1f41d02a2911ab8bea732097cd8fa421e46eda4f3dc6771796cd0975e3fae66d"
+    },
+    {
+        "aid": 33,
+        "iid": 8,
+        "uuid": "0000008A-0000-1000-8000-0026BB765291",
+        "type": "TemperatureSensor",
+        "humanType": "Temperature Sensor",
+        "serviceName": "Temperature",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 10,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "TemperatureSensor",
+                "serviceName": "Temperature",
+                "description": "Current Temperature",
+                "value": 25.4,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -50,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "CurrentTemperature": 25.4
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "a13323cab8a9a89f240be0893118ce9d17b49a7bfb671dd79aba4075eb0e07e6"
+    },
+    {
+        "aid": 33,
+        "iid": 21,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Air Pressure: 1011 hPa",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 23,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Air Pressure: 1011 hPa",
+                "description": "Occupancy Detected",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "f66f05003269b1559045bb0e83edd5b800622b7829ab0d90ca99c7544ddcbc6e"
+    },
+    {
+        "aid": 33,
+        "iid": 24,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Cloud Cover: 75",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 26,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Cloud Cover: 75",
+                "description": "Occupancy Detected",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "48c15924e6442ddea84c0ab1ac625319c6a0e33e7d317f5f4ab32358df37d3a4"
+    },
+    {
+        "aid": 33,
+        "iid": 27,
+        "uuid": "0000008A-0000-1000-8000-0026BB765291",
+        "type": "TemperatureSensor",
+        "humanType": "Temperature Sensor",
+        "serviceName": "Dew Point",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 29,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "TemperatureSensor",
+                "serviceName": "Dew Point",
+                "description": "Current Temperature",
+                "value": 21,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -50,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "CurrentTemperature": 21
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "0f9a3d25f5bed478cab3fff0a825803b05889357641e8b2659eaa0e2b9198a11"
+    },
+    {
+        "aid": 33,
+        "iid": 30,
+        "uuid": "00000082-0000-1000-8000-0026BB765291",
+        "type": "HumiditySensor",
+        "humanType": "Humidity Sensor",
+        "serviceName": "Humidity",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 32,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HumiditySensor",
+                "serviceName": "Humidity",
+                "description": "Current Relative Humidity",
+                "value": 79,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "CurrentRelativeHumidity": 79
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "9809f59ab32a819d63ab138e9a6fcc0591d57920a57226d67cdd6533479025c9"
+    },
+    {
+        "aid": 33,
+        "iid": 33,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Rain",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 35,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Rain",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "bbb517077c1518aac70a4349f888199a35821d61b3a3eb4651534b9ee79f2cd6"
+    },
+    {
+        "aid": 33,
+        "iid": 36,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Snow",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 38,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Snow",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "05cc54e7879cfa3b5b7eef898dec2f40a42669391328058b1b4b56154ffab9d8"
+    },
+    {
+        "aid": 33,
+        "iid": 39,
+        "uuid": "0000008A-0000-1000-8000-0026BB765291",
+        "type": "TemperatureSensor",
+        "humanType": "Temperature Sensor",
+        "serviceName": "Apparent Temperature",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 41,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "TemperatureSensor",
+                "serviceName": "Apparent Temperature",
+                "description": "Current Temperature",
+                "value": 26,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -50,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "CurrentTemperature": 26
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "a4754f61b0b4868ec68460be882506402ad567b91d813f6b865714216d8c22e3"
+    },
+    {
+        "aid": 33,
+        "iid": 42,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "UV Index: 3",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 44,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "UV Index: 3",
+                "description": "Occupancy Detected",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "3391ece9798d77d2610326a7c5c3c49acdf39f88b2037ca931eaaa654fe74683"
+    },
+    {
+        "aid": 33,
+        "iid": 45,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Wind Dir: SW",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 47,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Wind Dir: SW",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "c8b7e420891758988347ef4fed85321a8d5f64a5c7e830853b53d44a7f0372c6"
+    },
+    {
+        "aid": 33,
+        "iid": 48,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Wind Speed: 10.36 mph",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 50,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Wind Speed: 10.36 mph",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.6"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "27d534def8c8579b2b36f9587d3464a42cb1d96787ec731dd39eaba92732befd"
+    },
+    {
+        "aid": 41,
+        "iid": 8,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Bath Room Occupancy",
+        "serviceCharacteristics": [
+            {
+                "aid": 41,
+                "iid": 10,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Bath Room Occupancy",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Bath Room Occupancy",
+            "Serial Number": "JmoMagicOccupancySwitch",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "e607179d29128d2ea7aaaacc45da214b86c1515f397c9dc55ca9fc7e8c1212ca"
+    },
+    {
+        "aid": 41,
+        "iid": 21,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Bath Room Occupancy Motion",
+        "serviceCharacteristics": [
+            {
+                "aid": 41,
+                "iid": 23,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Bath Room Occupancy Motion",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Bath Room Occupancy",
+            "Serial Number": "JmoMagicOccupancySwitch",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "63df6b700a0509a43ba98c1814b835053628f0b42e3d76368e6e048c2b4f61c6"
+    },
+    {
+        "aid": 42,
+        "iid": 8,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Kitchen Occupancy",
+        "serviceCharacteristics": [
+            {
+                "aid": 42,
+                "iid": 10,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Kitchen Occupancy",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Kitchen Occupancy",
+            "Serial Number": "kitchenOccupancySwitch",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "c959b117a2f0a18ab6ea8c43efdae0adb1a085eb03ac5a5bec2bc53c59f673c3"
+    },
+    {
+        "aid": 42,
+        "iid": 21,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Kitchen Occupancy Motion",
+        "serviceCharacteristics": [
+            {
+                "aid": 42,
+                "iid": 23,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Kitchen Occupancy Motion",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Kitchen Occupancy",
+            "Serial Number": "kitchenOccupancySwitch",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "684e3fe711268ceb4f83106bd36a07e005eaaf501edb1c34ac53c0d6dabdec4d"
+    },
+    {
+        "aid": 58,
+        "iid": 8,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Living Room Occupancy",
+        "serviceCharacteristics": [
+            {
+                "aid": 58,
+                "iid": 10,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Living Room Occupancy",
+                "description": "Occupancy Detected",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Living Room Occupancy",
+            "Serial Number": "testing123",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "OccupancyDetected": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "976e8f48bc1dfd25d462b71ba4bc11dc43c077248d3bbe96d1a10de44a0d5c83"
+    },
+    {
+        "aid": 58,
+        "iid": 13,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Living Room Occupancy Motion",
+        "serviceCharacteristics": [
+            {
+                "aid": 58,
+                "iid": 15,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Living Room Occupancy Motion",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Living Room Occupancy",
+            "Serial Number": "testing123",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "a3675cfe24248728e464244b4f0d4c931842caa4e8e40fb9366245124bb736ee"
+    },
+    {
+        "aid": 60,
+        "iid": 8,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Front Door Occupancy",
+        "serviceCharacteristics": [
+            {
+                "aid": 60,
+                "iid": 10,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Front Door Occupancy",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Front Door Occupancy",
+            "Serial Number": "frontDoor1023",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "f3fff6e2f97219dcf51cde98a9fcc243c69d35feef1ad61aedaede0c5769ec9f"
+    },
+    {
+        "aid": 60,
+        "iid": 13,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Front Door Occupancy Motion",
+        "serviceCharacteristics": [
+            {
+                "aid": 60,
+                "iid": 15,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Front Door Occupancy Motion",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Front Door Occupancy",
+            "Serial Number": "frontDoor1023",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "9ade43c2cbf7fdf2981d74670f885debb2117742b1c5f8471e3e467021bb2d41"
+    },
+    {
+        "aid": 61,
+        "iid": 8,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Kid's Room Occupancy",
+        "serviceCharacteristics": [
+            {
+                "aid": 61,
+                "iid": 10,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Kid's Room Occupancy",
+                "description": "Occupancy Detected",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Kid's Room Occupancy",
+            "Serial Number": "kidsroom295324",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "OccupancyDetected": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "d7c66bc8bdd4c4543a485947a71812c1ade52ac839ee4cca675cf4c70c85305b"
+    },
+    {
+        "aid": 61,
+        "iid": 13,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Kid's Room Occupancy Motion",
+        "serviceCharacteristics": [
+            {
+                "aid": 61,
+                "iid": 15,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Kid's Room Occupancy Motion",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
+            "Model": "Default-Model",
+            "Name": "Kid's Room Occupancy",
+            "Serial Number": "kidsroom295324",
+            "Firmware Revision": "3.2.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "b62057026e2f3a218b305d7dd0c63069fb1c56d795eb38f6a34bca419fc75982"
+    },
+    {
+        "aid": 2,
+        "iid": 9,
+        "uuid": "00000047-0000-1000-8000-0026BB765291",
+        "type": "Outlet",
+        "humanType": "Outlet",
+        "serviceName": "Bed Room Heater Plug",
+        "serviceCharacteristics": [
+            {
+                "aid": 2,
+                "iid": 11,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Outlet",
+                "serviceName": "Bed Room Heater Plug",
+                "description": "On",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 2,
+                "iid": 12,
+                "uuid": "00000026-0000-1000-8000-0026BB765291",
+                "type": "OutletInUse",
+                "serviceType": "Outlet",
+                "serviceName": "Bed Room Heater Plug",
+                "description": "Outlet In Use",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "TP-Link",
+            "Model": "HS100(US)",
+            "Name": "Bed Room Heater Plug",
+            "Serial Number": "B0:4E:26:0D:5D:0E 80066703009C46F048CF7280C9FFEDB8195E5879",
+            "Firmware Revision": "1.5.4 Build 181225 Rel.101038",
+            "Hardware Revision": "2.0"
+        },
+        "values": {
+            "On": 1,
+            "OutletInUse": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "2cc13fb60943e9802a34ee59eb0fefd0418820fd60aeb772c2a6730aa6ed4c0e"
+    },
+    {
+        "aid": 3,
+        "iid": 9,
+        "uuid": "00000047-0000-1000-8000-0026BB765291",
+        "type": "Outlet",
+        "humanType": "Outlet",
+        "serviceName": "Bed Room Accent",
+        "serviceCharacteristics": [
+            {
+                "aid": 3,
+                "iid": 11,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Outlet",
+                "serviceName": "Bed Room Accent",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 3,
+                "iid": 12,
+                "uuid": "00000026-0000-1000-8000-0026BB765291",
+                "type": "OutletInUse",
+                "serviceType": "Outlet",
+                "serviceName": "Bed Room Accent",
+                "description": "Outlet In Use",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "TP-Link",
+            "Model": "HS100(US)",
+            "Name": "Bed Room Accent",
+            "Serial Number": "50:C7:BF:10:0B:BF 80063073A444E931AFF5F865ECAD87D817BCB73E",
+            "Firmware Revision": "1.2.6 Build 200727 Rel.120528",
+            "Hardware Revision": "1.0"
+        },
+        "values": {
+            "On": 0,
+            "OutletInUse": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "7f8e1b3f54b9808d06ff029aaf838c3b2a215fb459644d6c690f18181bb5123a"
+    },
+    {
+        "aid": 11,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Living Room TV Playing",
+        "serviceCharacteristics": [
+            {
+                "aid": 11,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Living Room TV Playing",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Living Room TV Playing",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "4801f9b1dd5d4b766255f8bb564eac6c89de008b977370185912237a7c4747a3"
+    },
+    {
+        "aid": 12,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Living Room TV Power",
+        "serviceCharacteristics": [
+            {
+                "aid": 12,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Living Room TV Power",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Living Room TV Power",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "74784419b82927897a6182cc7228da89f0f183f7a64e138749e2027becc5aef5"
+    },
+    {
+        "aid": 13,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Bed Room TV Playing",
+        "serviceCharacteristics": [
+            {
+                "aid": 13,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Bed Room TV Playing",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Bed Room TV Playing",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "24afb7147fff8890f3a70a2a79294e41800d11e684fede14c0ff84e18cb08d8a"
+    },
+    {
+        "aid": 14,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Bed Room TV Power",
+        "serviceCharacteristics": [
+            {
+                "aid": 14,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Bed Room TV Power",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Bed Room TV Power",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "f395f099994a216ce085e512154cbbbe2eda4412a5162adbb558220c3efdf2ec"
+    },
+    {
+        "aid": 17,
+        "iid": 48,
+        "uuid": "000000BC-0000-1000-8000-0026BB765291",
+        "type": "HeaterCooler",
+        "humanType": "Heater Cooler",
+        "serviceName": "bedroom AC",
+        "serviceCharacteristics": [
+            {
+                "aid": 17,
+                "iid": 50,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 51,
+                "uuid": "000000B1-0000-1000-8000-0026BB765291",
+                "type": "CurrentHeaterCoolerState",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Current Heater-Cooler State",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 52,
+                "uuid": "000000B2-0000-1000-8000-0026BB765291",
+                "type": "TargetHeaterCoolerState",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Target Heater-Cooler State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 2,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 53,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Current Temperature",
+                "value": 22.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -100,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 54,
+                "uuid": "0000000D-0000-1000-8000-0026BB765291",
+                "type": "CoolingThresholdTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Cooling Threshold Temperature",
+                "value": 16.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 32,
+                "minValue": 16,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 55,
+                "uuid": "00000012-0000-1000-8000-0026BB765291",
+                "type": "HeatingThresholdTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Heating Threshold Temperature",
+                "value": 16.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 32,
+                "minValue": 16,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 56,
+                "uuid": "00000036-0000-1000-8000-0026BB765291",
+                "type": "TemperatureDisplayUnits",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Temperature Display Units",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 57,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Current Relative Humidity",
+                "value": 54,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 58,
+                "uuid": "000000B6-0000-1000-8000-0026BB765291",
+                "type": "SwingMode",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Swing Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 59,
+                "uuid": "00000029-0000-1000-8000-0026BB765291",
+                "type": "RotationSpeed",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Rotation Speed",
+                "value": 100,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 60,
+                "uuid": "000000AC-0000-1000-8000-0026BB765291",
+                "type": "FilterChangeIndication",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Filter Change Indication",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 61,
+                "uuid": "000000AB-0000-1000-8000-0026BB765291",
+                "type": "FilterLifeLevel",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Filter Life Level",
+                "value": 0,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 62,
+                "uuid": "000000AD-0000-1000-8000-0026BB765291",
+                "type": "ResetFilterIndication",
+                "serviceType": "HeaterCooler",
+                "serviceName": "bedroom AC",
+                "description": "Reset Filter Indication",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 1,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2",
+            "Name": "bedroom AC",
+            "Serial Number": "392105167",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "Active": 1,
+            "CurrentHeaterCoolerState": 3,
+            "TargetHeaterCoolerState": 2,
+            "CurrentTemperature": 22.1,
+            "CoolingThresholdTemperature": 16.1,
+            "HeatingThresholdTemperature": 16.1,
+            "TemperatureDisplayUnits": 1,
+            "CurrentRelativeHumidity": 54,
+            "SwingMode": 1,
+            "RotationSpeed": 100,
+            "FilterChangeIndication": 1,
+            "FilterLifeLevel": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "37c6616bbfa2ec16d06c509f144faa56bad9bb4c57ea9aae6f5128c234631c17"
+    },
+    {
+        "aid": 17,
+        "iid": 68,
+        "uuid": "000000BD-0000-1000-8000-0026BB765291",
+        "type": "HumidifierDehumidifier",
+        "humanType": "Humidifier Dehumidifier",
+        "serviceName": "bedroom Dry",
+        "serviceCharacteristics": [
+            {
+                "aid": 17,
+                "iid": 70,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Active",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 71,
+                "uuid": "000000B3-0000-1000-8000-0026BB765291",
+                "type": "CurrentHumidifierDehumidifierState",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Current Humidifier-Dehumidifier State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 72,
+                "uuid": "000000B4-0000-1000-8000-0026BB765291",
+                "type": "TargetHumidifierDehumidifierState",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Target Humidifier-Dehumidifier State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 2,
+                "minValue": 2,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 73,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Current Relative Humidity",
+                "value": 54,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 74,
+                "uuid": "000000B6-0000-1000-8000-0026BB765291",
+                "type": "SwingMode",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Swing Mode",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 17,
+                "iid": 75,
+                "uuid": "00000029-0000-1000-8000-0026BB765291",
+                "type": "RotationSpeed",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "bedroom Dry",
+                "description": "Rotation Speed",
+                "value": 100,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2",
+            "Name": "bedroom AC",
+            "Serial Number": "392105167",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "Active": 0,
+            "CurrentHumidifierDehumidifierState": 0,
+            "TargetHumidifierDehumidifierState": 2,
+            "CurrentRelativeHumidity": 54,
+            "SwingMode": 0,
+            "RotationSpeed": 100
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "ac408b3d6e9773630f53cd99cf046d88a311229d292c4716e632b8d959898c33"
+    },
+    {
+        "aid": 20,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Kids are Home",
+        "serviceCharacteristics": [
+            {
+                "aid": 20,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Kids are Home",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Kids are Home",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "40f5e81036ffef8e594ef6b041e7430a4fee34922f224559b129b411a63ec351"
+    },
+    {
+        "aid": 37,
+        "iid": 14,
+        "uuid": "00000082-0000-1000-8000-0026BB765291",
+        "type": "HumiditySensor",
+        "humanType": "Humidity Sensor",
+        "serviceName": "bedroom Humidity",
+        "serviceCharacteristics": [
+            {
+                "aid": 37,
+                "iid": 16,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HumiditySensor",
+                "serviceName": "bedroom Humidity",
+                "description": "Current Relative Humidity",
+                "value": 54,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2_humidity",
+            "Name": "bedroom Humidity",
+            "Serial Number": "392105167_humidity",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "CurrentRelativeHumidity": 54
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "d88db1832a9c8376c411058069216b9085d67be1be6cbe3afb55f5f8b8caff72"
+    },
+    {
+        "aid": 54,
+        "iid": 8,
+        "uuid": "0000004A-0000-1000-8000-0026BB765291",
+        "type": "Thermostat",
+        "humanType": "Thermostat",
+        "serviceName": "Wynter",
+        "serviceCharacteristics": [
+            {
+                "aid": 54,
+                "iid": 10,
+                "uuid": "0000000F-0000-1000-8000-0026BB765291",
+                "type": "CurrentHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "Wynter",
+                "description": "Current Heating Cooling State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 54,
+                "iid": 11,
+                "uuid": "00000033-0000-1000-8000-0026BB765291",
+                "type": "TargetHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "Wynter",
+                "description": "Target Heating Cooling State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 54,
+                "iid": 12,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "Wynter",
+                "description": "Current Temperature",
+                "value": 22.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -270,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 54,
+                "iid": 13,
+                "uuid": "00000035-0000-1000-8000-0026BB765291",
+                "type": "TargetTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "Wynter",
+                "description": "Target Temperature",
+                "value": 21.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 38,
+                "minValue": 10,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 54,
+                "iid": 14,
+                "uuid": "00000036-0000-1000-8000-0026BB765291",
+                "type": "TemperatureDisplayUnits",
+                "serviceType": "Thermostat",
+                "serviceName": "Wynter",
+                "description": "Temperature Display Units",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Wynter",
+            "Model": "e-zone",
+            "Name": "Wynter",
+            "Serial Number": "Wynter e-zone2",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "CurrentHeatingCoolingState": 2,
+            "TargetHeatingCoolingState": 2,
+            "CurrentTemperature": 22.1,
+            "TargetTemperature": 21.1,
+            "TemperatureDisplayUnits": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "2fa088a5e8adead127a4dfa18495491e066976446bf922ea9823e63aba9260d7"
+    },
+    {
+        "aid": 55,
+        "iid": 14,
+        "uuid": "000000BC-0000-1000-8000-0026BB765291",
+        "type": "HeaterCooler",
+        "humanType": "Heater Cooler",
+        "serviceName": "kids room AC",
+        "serviceCharacteristics": [
+            {
+                "aid": 55,
+                "iid": 16,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 17,
+                "uuid": "000000B1-0000-1000-8000-0026BB765291",
+                "type": "CurrentHeaterCoolerState",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Current Heater-Cooler State",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 18,
+                "uuid": "000000B2-0000-1000-8000-0026BB765291",
+                "type": "TargetHeaterCoolerState",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Target Heater-Cooler State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 2,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 19,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Current Temperature",
+                "value": 23.9,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -100,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 20,
+                "uuid": "0000000D-0000-1000-8000-0026BB765291",
+                "type": "CoolingThresholdTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Cooling Threshold Temperature",
+                "value": 16.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 31,
+                "minValue": 16,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 21,
+                "uuid": "00000012-0000-1000-8000-0026BB765291",
+                "type": "HeatingThresholdTemperature",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Heating Threshold Temperature",
+                "value": 16.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 31,
+                "minValue": 16,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 22,
+                "uuid": "00000036-0000-1000-8000-0026BB765291",
+                "type": "TemperatureDisplayUnits",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Temperature Display Units",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 23,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Current Relative Humidity",
+                "value": 58,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 24,
+                "uuid": "000000B6-0000-1000-8000-0026BB765291",
+                "type": "SwingMode",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Swing Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 25,
+                "uuid": "00000029-0000-1000-8000-0026BB765291",
+                "type": "RotationSpeed",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Rotation Speed",
+                "value": 100,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 26,
+                "uuid": "000000AC-0000-1000-8000-0026BB765291",
+                "type": "FilterChangeIndication",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Filter Change Indication",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 27,
+                "uuid": "000000AB-0000-1000-8000-0026BB765291",
+                "type": "FilterLifeLevel",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Filter Life Level",
+                "value": 32,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 28,
+                "uuid": "000000AD-0000-1000-8000-0026BB765291",
+                "type": "ResetFilterIndication",
+                "serviceType": "HeaterCooler",
+                "serviceName": "kids room AC",
+                "description": "Reset Filter Indication",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 1,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2",
+            "Name": "kids room AC",
+            "Serial Number": "392104963",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "Active": 1,
+            "CurrentHeaterCoolerState": 3,
+            "TargetHeaterCoolerState": 2,
+            "CurrentTemperature": 23.9,
+            "CoolingThresholdTemperature": 16.1,
+            "HeatingThresholdTemperature": 16.1,
+            "TemperatureDisplayUnits": 1,
+            "CurrentRelativeHumidity": 58,
+            "SwingMode": 1,
+            "RotationSpeed": 100,
+            "FilterChangeIndication": 0,
+            "FilterLifeLevel": 32
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "934436277135b61fdbb901f21678aa72810e962d0c3dbb059278fbefb63e7239"
+    },
+    {
+        "aid": 55,
+        "iid": 29,
+        "uuid": "000000BD-0000-1000-8000-0026BB765291",
+        "type": "HumidifierDehumidifier",
+        "humanType": "Humidifier Dehumidifier",
+        "serviceName": "kids room Dry",
+        "serviceCharacteristics": [
+            {
+                "aid": 55,
+                "iid": 31,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Active",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 32,
+                "uuid": "000000B3-0000-1000-8000-0026BB765291",
+                "type": "CurrentHumidifierDehumidifierState",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Current Humidifier-Dehumidifier State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 33,
+                "uuid": "000000B4-0000-1000-8000-0026BB765291",
+                "type": "TargetHumidifierDehumidifierState",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Target Humidifier-Dehumidifier State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 2,
+                "minValue": 2,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 34,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Current Relative Humidity",
+                "value": 58,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 35,
+                "uuid": "000000B6-0000-1000-8000-0026BB765291",
+                "type": "SwingMode",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Swing Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 55,
+                "iid": 36,
+                "uuid": "00000029-0000-1000-8000-0026BB765291",
+                "type": "RotationSpeed",
+                "serviceType": "HumidifierDehumidifier",
+                "serviceName": "kids room Dry",
+                "description": "Rotation Speed",
+                "value": 100,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2",
+            "Name": "kids room AC",
+            "Serial Number": "392104963",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "Active": 0,
+            "CurrentHumidifierDehumidifierState": 0,
+            "TargetHumidifierDehumidifierState": 2,
+            "CurrentRelativeHumidity": 58,
+            "SwingMode": 1,
+            "RotationSpeed": 100
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "c4edbc8f8f14fb0561e0d89370c7e852decfb70891fac0047eace3ec1ff0b197"
+    },
+    {
+        "aid": 56,
+        "iid": 14,
+        "uuid": "00000082-0000-1000-8000-0026BB765291",
+        "type": "HumiditySensor",
+        "humanType": "Humidity Sensor",
+        "serviceName": "kids room Humidity",
+        "serviceCharacteristics": [
+            {
+                "aid": 56,
+                "iid": 16,
+                "uuid": "00000010-0000-1000-8000-0026BB765291",
+                "type": "CurrentRelativeHumidity",
+                "serviceType": "HumiditySensor",
+                "serviceName": "kids room Humidity",
+                "description": "Current Relative Humidity",
+                "value": 58,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sensibo Inc.",
+            "Model": "skyv2_humidity",
+            "Name": "kids room Humidity",
+            "Serial Number": "392104963_humidity",
+            "Firmware Revision": "2.2.0"
+        },
+        "values": {
+            "CurrentRelativeHumidity": 58
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "c5b60300858ad2f1c952988e49ca6014b114317bb97e8c7179246c31dec0cbee"
+    },
+    {
+        "aid": 57,
+        "iid": 8,
+        "uuid": "0000004A-0000-1000-8000-0026BB765291",
+        "type": "Thermostat",
+        "humanType": "Thermostat",
+        "serviceName": "KidsRoomThermostat",
+        "serviceCharacteristics": [
+            {
+                "aid": 57,
+                "iid": 10,
+                "uuid": "0000000F-0000-1000-8000-0026BB765291",
+                "type": "CurrentHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "KidsRoomThermostat",
+                "description": "Current Heating Cooling State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 57,
+                "iid": 11,
+                "uuid": "00000033-0000-1000-8000-0026BB765291",
+                "type": "TargetHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "KidsRoomThermostat",
+                "description": "Target Heating Cooling State",
+                "value": 2,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 57,
+                "iid": 12,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "KidsRoomThermostat",
+                "description": "Current Temperature",
+                "value": 23.9,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -270,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 57,
+                "iid": 13,
+                "uuid": "00000035-0000-1000-8000-0026BB765291",
+                "type": "TargetTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "KidsRoomThermostat",
+                "description": "Target Temperature",
+                "value": 23.3,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 38,
+                "minValue": 10,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 57,
+                "iid": 14,
+                "uuid": "00000036-0000-1000-8000-0026BB765291",
+                "type": "TemperatureDisplayUnits",
+                "serviceType": "Thermostat",
+                "serviceName": "KidsRoomThermostat",
+                "description": "Temperature Display Units",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Wynter",
+            "Model": "e-zone",
+            "Name": "Kid's Room Thermostat",
+            "Serial Number": "Wynter e-zone25",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "CurrentHeatingCoolingState": 2,
+            "TargetHeatingCoolingState": 2,
+            "CurrentTemperature": 23.9,
+            "TargetTemperature": 23.3,
+            "TemperatureDisplayUnits": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "55cbfe00edf813df1c505d170adafbc9464e0a224f0120e9d10e542e2e35c697"
+    },
+    {
+        "aid": 59,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Kids in Bed",
+        "serviceCharacteristics": [
+            {
+                "aid": 59,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Kids in Bed",
+                "description": "On",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Kids in Bed",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "13cfb5e0429bd2fef1c4676735176c91ec429c30fcb3744c4d0e3b8fa98a580e"
+    }
+]

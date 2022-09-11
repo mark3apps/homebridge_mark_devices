@@ -1,0 +1,118 @@
+{
+    "platform": "Cmd4",
+    "name": "Cmd4",
+    "debug": false,
+    "interval": 5,
+    "timeout": 12000,
+    "stateChangeResponseTime": 3,
+    "queueTypes": [
+        {
+            "queue": "A",
+            "queueType": "Sequential"
+        },
+        {
+            "queue": "ThermostatQueue",
+            "queueType": "WoRm"
+        }
+    ],
+    "accessories": [
+        {
+            "type": "Switch",
+            "displayName": "Kids are Home",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Switch",
+            "displayName": "Kids in Bed",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Switch",
+            "displayName": "Bed Room TV Playing",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Switch",
+            "displayName": "Bed Room TV Power",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Switch",
+            "displayName": "Living Room TV Playing",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Switch",
+            "displayName": "Living Room TV Power",
+            "queue": "A",
+            "on": "FALSE"
+        },
+        {
+            "type": "Thermostat",
+            "displayName": "Wynter",
+            "name": "Wynter",
+            "currentHeatingCoolingState": 0,
+            "targetHeatingCoolingState": 0,
+            "currentTemperature": 25,
+            "targetTemperature": 25,
+            "temperatureDisplayUnits": 1,
+            "coolingThresholdTemperature": 22,
+            "heatingThresholdTemperature": 25,
+            "manufacturer": "Wynter",
+            "model": "e-zone",
+            "serialNumber": "Wynter e-zone2",
+            "queue": "ThermostatQueue",
+            "polling": [
+                {
+                    "characteristic": "currentTemperature",
+                    "interval": 15
+                },
+                {
+                    "characteristic": "targetTemperature"
+                },
+                {
+                    "characteristic": "targetHeatingCoolingState"
+                },
+                {
+                    "characteristic": "currentHeatingCoolingState"
+                }
+            ],
+            "state_cmd": "python3 /var/lib/homebridge/modules/homebridge_ac/mark_homebridge"
+        },
+        {
+            "type": "Thermostat",
+            "displayName": "KidsRoomThermostat",
+            "name": "KidsRoomThermostat",
+            "currentHeatingCoolingState": "OFF",
+            "targetHeatingCoolingState": "OFF",
+            "currentTemperature": 25,
+            "targetTemperature": 25,
+            "temperatureDisplayUnits": "FAHRENHEIT",
+            "manufacturer": "Wynter",
+            "model": "e-zone",
+            "serialNumber": "Wynter e-zone25",
+            "queue": "ThermostatQueue",
+            "polling": [
+                {
+                    "characteristic": "currentTemperature",
+                    "interval": 15
+                },
+                {
+                    "characteristic": "targetTemperature"
+                },
+                {
+                    "characteristic": "currentHeatingCoolingState"
+                },
+                {
+                    "characteristic": "targetHeatingCoolingState"
+                }
+            ],
+            "state_cmd": "python3 /var/lib/homebridge/modules/homebridge_ac/mark_homebridge"
+        }
+    ]
+}
