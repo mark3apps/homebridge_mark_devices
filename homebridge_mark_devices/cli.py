@@ -1,11 +1,13 @@
 import argparse
 import asyncio
 import logging
+import task_scheduler
 
 import core
 
 
 def main():
+
     # create a parser object for understanding command-line arguments
     parser = argparse.ArgumentParser(
         description="Homebridge Mark Devices",
@@ -20,8 +22,12 @@ def main():
         help="Enable debug mode",
     )
 
-    parser.add_argument("io", type=str, choices=["Set", "Get", "Update"], help="IO")
-    parser.add_argument("device", type=str, help="Device name", nargs="?", default="")
+    parser.add_argument(
+        "io", type=str, choices=["Set", "Get", "Update", "Schedule"], help="IO"
+    )
+    parser.add_argument(
+        "device_name", type=str, help="Device name", nargs="?", default=""
+    )
     parser.add_argument(
         "characteristic", type=str, help="Characteristic name", nargs="?", default=""
     )
@@ -38,13 +44,31 @@ def main():
 
     # access the arguments
     if args.debug:
-        logging.basicConfig(level=logging.DEBUG)
-        logging.debug("debug modes enabled")
+        logging.basicConfig(
+            level=logging.DEBUG,
+            filename="logs/cli.log",
+            format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+            datefmt="%H:%M:%S",
+            handlers=[logging.FileHandler("debug.log"), logging.StreamHandler()],
+        ),
+
     else:
         logging.basicConfig(level=logging.INFO)
 
-    if args.io == "Set" or args.io == "Get":
+    logger = logging.getLogger(__name__)
+    logger.debug("debug mode enabled")
+
+    logger.debug("IO: " + args.io)
+    logger.debug("Device: " + args.device_name)
+    logger.debug("Characteristic: " + args.characteristic)
+    logger.debug("Option: " + args.option)
+
+    if args.io != "Schedule":
+        logger.debug("Running Once")
         result = asyncio.run(
-            core.main(args.io, args.device, args.characteristic, args.option)
+            core.main(args.io, args.device_name, args.characteristic, args.option)
         )
         print(result)
+    else:
+        logger.debug("Running Scheduler")
+        task_scheduler.start(args)

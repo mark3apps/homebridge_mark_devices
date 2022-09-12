@@ -16,12 +16,6 @@ import logging
 
 async def main(io: str, device_name: str, characteristic: str, option: str):
 
-    logging.debug("Debug mode")
-    logging.debug("IO: " + io)
-    logging.debug("Device: " + device_name)
-    logging.debug("Characteristic: " + characteristic)
-    logging.debug("Option: " + option)
-
     device_type = DeviceType(device_model.getType(device_name))
 
     logging.debug("Device type: " + str(device_type))
@@ -37,18 +31,21 @@ async def main(io: str, device_name: str, characteristic: str, option: str):
                     result = device.set(characteristic, option)
                 case "Update":
                     device = thermostat_model.ThermostatModel(device_name)
-                    result = device.update()
+                    result = device.update_values()
                 case _:
-                    result = "Invalid IO"
+                    result = None
 
         case DeviceType.APPLE_TV:
             device_path = os.path.join(
                 BASE_PATH, "data", "devices", f"{device_name}.device"
             )
-            result = ""
+            result = None
 
         case _:
             logging.debug("Unknown device type")
-            result = ""
+            result = None
 
-    return result
+    if result != None:
+        return str(await result)
+
+    return None

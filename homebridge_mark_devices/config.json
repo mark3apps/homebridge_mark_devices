@@ -1,6 +1,12 @@
 {
-    "active_devices": [
-        "Wynter",
-        "KidsRoomThermostat"
+    "devices": [
+        {
+            "name": "Wynter",
+            "type": 1
+        },
+        {
+            "name": "KidsRoomThermostat",
+            "type": 1
+        }
     ]
 }

@@ -1,3 +1,4 @@
+from ast import Pass
 import typing
 import requests
 
@@ -15,13 +16,13 @@ class ThermostatData(typing.TypedDict):
 class ThermostatValues(typing.TypedDict):
     thermostat_target_state: int
     thermostat_current_state: int
+    heater_cooler_active: int
     heater_cooler_current_state: int
     heater_cooler_target_state: int
     heater_cooler_temperature: float
     current_temperature: float
     target_temperature: float
     outdoor_temperature: float
-    heater_cooler_active: int
 
 
 class ThermostatConfig(DeviceConfig):
@@ -44,14 +45,14 @@ class ThermostatModel(DeviceModel):
     @property
     def cred(self):
         if self._cred is None:
-            return credentials.get_cred_json("creds")
+            return credentials.get_cred_json("homebridge_creds")
         else:
             return self._cred
 
     @property
     def auth_headers(self):
         if self._auth_headers is None:
-            return credentials.get("creds")
+            return credentials.get("homebridge_creds")
         else:
             return self._auth_headers
 
@@ -85,15 +86,6 @@ class ThermostatModel(DeviceModel):
         self.save_config()
 
     @property
-    def heater_cooler_temperature(self) -> float:
-        return self._config["values"]["heater_cooler_temperature"]
-
-    @heater_cooler_temperature.setter
-    def heater_cooler_temperature(self, value: float):
-        self._config["values"]["heater_cooler_temperature"] = value
-        self.save_config()
-
-    @property
     def thermostat_current_state(self) -> ThermostatCurrentState:
         return ThermostatCurrentState(
             self._config["values"]["thermostat_current_state"]
@@ -103,6 +95,20 @@ class ThermostatModel(DeviceModel):
     def thermostat_current_state(self, value: ThermostatCurrentState):
         self._config["values"]["thermostat_current_state"] = int(value)
         self.save_config()
+
+        self.set_accessory(self.real_ID, "TargetHeaterCoolerState", str(value))
+
+    @property
+    def heater_cooler_temperature(self) -> float:
+        return self._config["values"]["heater_cooler_temperature"]
+
+    @heater_cooler_temperature.setter
+    def heater_cooler_temperature(self, value: float):
+        self._config["values"]["heater_cooler_temperature"] = value
+        self.save_config()
+
+        self.set_accessory(self.real_ID, "HeatingThresholdTemperature", value)
+        self.set_accessory(self.real_ID, "CoolingThresholdTemperature", value)
 
     @property
     def heater_cooler_current_state(self) -> HeaterCoolerCurrentState:
@@ -194,7 +200,68 @@ class ThermostatModel(DeviceModel):
     # Updates
     #
 
-    def update(self):
+    def set_accessory(self, id: str, characteristic: str, value: str | float | int):
+        data = {
+            "characteristicType": characteristic,
+            "value": str(value),
+        }
+
+        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
+
+        x = requests.put(
+            self.url + "accessories/" + id,
+            headers=header,
+            json=data,
+        )
+
+        return x
+
+    def get_accessory(self, id: str) -> dict[str, typing.Any]:
+        ac = requests.get(
+            self.url + "accessories/" + id,
+            headers=self.auth_headers_dict,
+        )
+        return ac.json()["values"]
+
+    async def update_values(self):
+        self._config["values"]["heater_cooler_current_state"] = int(
+            self.get_accessory(self.real_ID)["CurrentHeaterCoolerState"]
+        )
+        self._config["values"]["heater_cooler_target_state"] = int(
+            self.get_accessory(self.real_ID)["TargetHeaterCoolerState"]
+        )
+        self._config["values"]["heater_cooler_active"] = int(
+            self.get_accessory(self.real_ID)["Active"]
+        )
+        self._config["values"]["heater_cooler_temperature"] = self.get_accessory(
+            self.real_ID
+        )["HeatingThresholdTemperature"]
+        self._config["values"]["current_temperature"] = self.get_accessory(
+            self.real_ID
+        )["CurrentTemperature"]
+        self._config["values"]["outdoor_temperature"] = self.get_accessory(
+            self.weather_ID
+        )["CurrentTemperature"]
+
+        heater_cooler_state = self.heater_cooler_current_state
+
+        thermostat_current_state: ThermostatCurrentState = ThermostatCurrentState.OFF
+
+        if heater_cooler_state == HeaterCoolerCurrentState.COOLING:
+            thermostat_current_state = ThermostatCurrentState.COOL
+        elif heater_cooler_state == HeaterCoolerCurrentState.HEATING:
+            thermostat_current_state = ThermostatCurrentState.HEAT
+        elif heater_cooler_state == HeaterCoolerCurrentState.IDLE:
+            thermostat_current_state = ThermostatCurrentState.OFF
+        elif heater_cooler_state == HeaterCoolerCurrentState.OFF:
+            thermostat_current_state = ThermostatCurrentState.OFF
+
+        self._config["values"]["thermostat_current_state"] = thermostat_current_state
+
+        self.save_config()
+        return True
+
+    def update_service(self):
         real_state = self.heater_cooler_target_state
         real_active = self.heater_cooler_active
         outdoor_temp = float(self.outdoor_temperature)

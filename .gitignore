@@ -161,3 +161,4 @@ cython_debug/
 
 /homebridge_mark_devices/data/creds/*.json
 /homebridge_mark_devices/data/devices/*.json
+/logs/*.log

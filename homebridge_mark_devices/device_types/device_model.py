@@ -1,3 +1,4 @@
+import logging
 import os
 import json
 import typing
@@ -34,6 +35,7 @@ class DeviceModel:
     def save_config(self):
         with open(self._config_path, "w") as f:
             json.dump(self._config, f)
+            logging.debug("Saved config for " + self.name)
 
 
 # Load Homebridge device config values by name

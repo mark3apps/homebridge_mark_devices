@@ -5,24 +5,42 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "updateServer",
-            "type": "python",
-            "request": "launch",
-            "program": "update_server",
-            "console": "integratedTerminal",
-            "justMyCode": true,
-        },
-        {
             "name": "Get Current Temperature",
             "type": "python",
             "request": "launch",
-            "program": "mark_homebridge",
+            "program": "homebridge_mark_devices",
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
                 "Get",
-                "BedRoomTV",
-                "Playing"
+                "Wynter",
+                "CurrentTemperature",
+                "-d"
+            ]
+        },
+        {
+            "name": "Update Values",
+            "type": "python",
+            "request": "launch",
+            "program": "homebridge_mark_devices",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "Update",
+                "Wynter",
+                "-d"
+            ]
+        },
+        {
+            "name": "Start Scheduler",
+            "type": "python",
+            "request": "launch",
+            "program": "homebridge_mark_devices",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "Schedule",
+                "-d"
             ]
         }
     ]
