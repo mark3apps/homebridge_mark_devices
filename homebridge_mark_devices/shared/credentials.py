@@ -1,11 +1,12 @@
 import json
 import os
 from typing import TypedDict
+import typing
 import requests
 import time
 
-import c_types
 from shared.globals import BASE_PATH
+
 
 class AuthHeader(TypedDict):
     accept: str
@@ -85,4 +86,4 @@ def get_auth_headers(token: dict[str, str]):
         "Authorization": "Bearer " + str(token["access_token"]),
     }
 
-    return auth_headers
+    return typing.cast(AuthHeader, auth_headers)

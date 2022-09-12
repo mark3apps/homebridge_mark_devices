@@ -1,6 +1,7 @@
 import typing
+import requests
 
-from shared import c_enums
+from shared.c_enums import *
 from device_types.device_model import DeviceModel, DeviceConfig
 from shared import credentials
 
@@ -20,6 +21,7 @@ class ThermostatValues(typing.TypedDict):
     current_temperature: float
     target_temperature: float
     outdoor_temperature: float
+    heater_cooler_active: int
 
 
 class ThermostatConfig(DeviceConfig):
@@ -28,15 +30,30 @@ class ThermostatConfig(DeviceConfig):
 
 
 class ThermostatModel(DeviceModel):
+    _cred: credentials.Credentials | None = None
+    _auth_headers: credentials.AuthHeader | None = None
+
     def __init__(self, name: str):
         super().__init__(name)
         self._config = typing.cast(ThermostatConfig, self._config)
-        self.cred = credentials.get_cred_json("creds")
-        self.auth_headers = credentials.get("creds")
 
     #
     # Authentication
     #
+
+    @property
+    def cred(self):
+        if self._cred is None:
+            return credentials.get_cred_json("creds")
+        else:
+            return self._cred
+
+    @property
+    def auth_headers(self):
+        if self._auth_headers is None:
+            return credentials.get("creds")
+        else:
+            return self._auth_headers
 
     @property
     def auth_headers_dict(self):
@@ -59,13 +76,11 @@ class ThermostatModel(DeviceModel):
     #
 
     @property
-    def thermostat_target_state(self) -> c_enums.ThermostatState:
-        return c_enums.ThermostatState(
-            self._config["values"]["thermostat_target_state"]
-        )
+    def thermostat_target_state(self) -> ThermostatState:
+        return ThermostatState(self._config["values"]["thermostat_target_state"])
 
     @thermostat_target_state.setter
-    def thermostat_target_state(self, value: c_enums.ThermostatState):
+    def thermostat_target_state(self, value: ThermostatState):
         self._config["values"]["thermostat_target_state"] = int(value)
         self.save_config()
 
@@ -79,35 +94,35 @@ class ThermostatModel(DeviceModel):
         self.save_config()
 
     @property
-    def thermostat_current_state(self) -> c_enums.ThermostatCurrentState:
-        return c_enums.ThermostatCurrentState(
+    def thermostat_current_state(self) -> ThermostatCurrentState:
+        return ThermostatCurrentState(
             self._config["values"]["thermostat_current_state"]
         )
 
     @thermostat_current_state.setter
-    def thermostat_current_state(self, value: c_enums.ThermostatCurrentState):
+    def thermostat_current_state(self, value: ThermostatCurrentState):
         self._config["values"]["thermostat_current_state"] = int(value)
         self.save_config()
 
     @property
-    def heater_cooler_current_state(self) -> c_enums.HeaterCoolerCurrentState:
-        return c_enums.HeaterCoolerCurrentState(
+    def heater_cooler_current_state(self) -> HeaterCoolerCurrentState:
+        return HeaterCoolerCurrentState(
             self._config["values"]["heater_cooler_current_state"]
         )
 
     @heater_cooler_current_state.setter
-    def heater_cooler_current_state(self, value: c_enums.HeaterCoolerCurrentState):
+    def heater_cooler_current_state(self, value: HeaterCoolerCurrentState):
         self._config["values"]["heater_cooler_current_state"] = int(value)
         self.save_config()
 
     @property
-    def heater_cooler_target_state(self) -> c_enums.HeaterCoolerTargetState:
-        return c_enums.HeaterCoolerTargetState(
+    def heater_cooler_target_state(self) -> HeaterCoolerTargetState:
+        return HeaterCoolerTargetState(
             self._config["values"]["heater_cooler_target_state"]
         )
 
     @heater_cooler_target_state.setter
-    def heater_cooler_target_state(self, value: c_enums.HeaterCoolerTargetState):
+    def heater_cooler_target_state(self, value: HeaterCoolerTargetState):
         self._config["values"]["heater_cooler_target_state"] = int(value)
         self.save_config()
 
@@ -138,6 +153,27 @@ class ThermostatModel(DeviceModel):
         self._config["values"]["outdoor_temperature"] = value
         self.save_config()
 
+    @property
+    def heater_cooler_active(self):
+        return Active(self._config["values"]["heater_cooler_active"])
+
+    @heater_cooler_active.setter
+    def heater_cooler_active(self, value: Active):
+        self._config["values"]["heater_cooler_active"] = int(value)
+        self.save_config()
+
+        data = {
+            "characteristicType": "Active",
+            "value": str(int(value)),
+        }
+        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
+
+        x = requests.put(
+            self.url + "accessories/" + self.real_ID,
+            headers=header,
+            json=data,
+        )
+
     #
     # PROPERTIES
     #
@@ -153,3 +189,142 @@ class ThermostatModel(DeviceModel):
     @property
     def weather_ID(self) -> str:
         return self._config["properties"]["weather_ID"]
+
+    #
+    # Updates
+    #
+
+    def update(self):
+        real_state = self.heater_cooler_target_state
+        real_active = self.heater_cooler_active
+        outdoor_temp = float(self.outdoor_temperature)
+        current_temperature = float(self.current_temperature)
+        target_temp = float(self.target_temperature)
+
+        print("State: " + str(self.thermostat_target_state))
+        print("Real State: " + str(real_state))
+        print("Real Active: " + str(real_active))
+        print("Current Temp: " + str(current_temperature))
+        print("Target Temp: " + str(target_temp))
+        print("Outdoor Temp: " + str(outdoor_temp))
+
+        if self.thermostat_target_state == ThermostatState.OFF:  # Off
+            if real_active == SwitchState.ON:
+                self.heater_cooler_active = Active.NO
+
+                print("Turning off")
+
+        elif self.thermostat_target_state == ThermostatState.HEAT:  # Heating
+
+            print("Heating")
+
+            # Set Mode to Heat if not already set
+            if real_state == HeaterCoolerCurrentState.COOLING:
+                self.heater_cooler_target_state = HeaterCoolerTargetState.HEAT
+
+                print("Setting Mode to Heat")
+
+            # Temp is too High and Heat is on, Turn Heat off
+            if target_temp < current_temperature and real_active == "1":
+                self.heater_cooler_active = Active.NO
+
+                print("Turning off; Temp is too high")
+
+            # Temp is too Low and Heat is off, Turn Heat on
+            if (target_temp - 0.25) > current_temperature and real_active == "0":
+                self.heater_cooler_active = Active.YES
+                self.heater_cooler_temperature = 30
+
+                print("Turning on; Temp is too low")
+
+        elif self.thermostat_target_state == ThermostatState.COOL:  # Cooling
+
+            print("Cooling")
+
+            # Set Mode to Cool if not already set
+            if real_state == HeaterCoolerCurrentState.HEATING:
+                self.heater_cooler_target_state = HeaterCoolerTargetState.COOL
+                self.heater_cooler_temperature = 16
+
+                print("Setting Mode to Cool")
+
+            # Temp is too Low and Cool is on, Turn Cool off
+            if target_temp > current_temperature and real_active == Active.YES:
+                self.heater_cooler_active = Active.NO
+
+                print("Turning off; Temp is too low")
+
+            # Temp is too High and Cool is off, Turn Cool on
+            if (target_temp + 0.25) < current_temperature and real_active == Active.NO:
+                self.heater_cooler_active = Active.YES
+                self.heater_cooler_temperature = 16
+
+                print("Turning on; Temp is too high")
+
+        elif self.thermostat_target_state == ThermostatState.AUTO:  # Auto
+            weight = 0
+            weightShift = "cool"
+
+            if outdoor_temp > current_temperature:
+                weight = (outdoor_temp - current_temperature) / 6
+                weightShift = "cool"
+            if outdoor_temp < current_temperature:
+                weight = (current_temperature - outdoor_temp) / 6
+                weightShift = "heat"
+
+            if weight > 1:
+                weight = 1
+            elif weight < -1:
+                weight = -1
+
+            print("Weight: " + str(weight))
+            print(
+                "Heat Toggle: "
+                + str(target_temp - (6 * weight if weightShift == "cool" else 0.25))
+            )
+            print(
+                "Cool Toggle: "
+                + str(target_temp + (4 * weight if weightShift == "heat" else 0.25))
+            )
+
+            # Temp is too High and Heat is on, Turn Heat off
+            if (
+                target_temp < current_temperature
+                and real_active == Active.YES
+                and real_state == HeaterCoolerTargetState.HEAT
+            ):
+                self.heater_cooler_active = Active.NO
+
+                print("Turning off; Temp is too high")
+
+            # Temp is too Low and Heat is off, Turn Heat on
+            elif (
+                target_temp + (4 * weight if weightShift == "cool" else 0.15)
+            ) > current_temperature and real_active == Active.NO:
+                self.heater_cooler_target_state = HeaterCoolerTargetState.HEAT
+                self.heater_cooler_active = Active.YES
+
+                self.heater_cooler_temperature = 30
+
+                print("Turning on; Temp is too low")
+
+            # Temp is too Low and Cool is on, Turn Cool off
+            elif (
+                target_temp > current_temperature
+                and real_active == "1"
+                and real_state == HeaterCoolerCurrentState.COOLING
+            ):
+                self.heater_cooler_active = Active.NO
+
+                print("Turning off; Temp is too low")
+
+            # Temp is too High and Cool is off, Turn Cool on
+            elif (
+                target_temp + (4 * weight if weightShift == "heat" else 0.15)
+            ) < current_temperature and real_active == Active.NO:
+                self.heater_cooler_target_state = HeaterCoolerTargetState.COOL
+                self.heater_cooler_active = Active.YES
+
+                self.heater_cooler_temperature = 16
+
+                print("Turning on; Temp is too high")

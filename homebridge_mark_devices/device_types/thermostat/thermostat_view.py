@@ -10,6 +10,27 @@ class ThermostatView(ThermostatModel):
     def __init__(self, name) -> None:
         super().__init__(name)
 
+    def get(self, characteristic: str):
+        match characteristic:
+            case "CurrentTemperature":
+                result = self.current_temperature
+            case "TargetTemperature":
+                result = self.target_temperature
+            case "CurrentHeatingCoolingState":
+                result = self.thermostat_current_state
+            case "TargetHeatingCoolingState":
+                result = self.thermostat_target_state
+            case "HeaterCoolerTargetState":
+                result = self.heater_cooler_target_state
+            case "HeaterCoolerCurrentState":
+                result = self.heater_cooler_current_state
+            case "RealActive":
+                result = self.heater_cooler_active
+            case "OutdoorTemperature":
+                result = self.outdoor_temperature
+            case _:
+                result = "Unknown characteristic"
+
     def get_current_humidity(self):
         ac = requests.get(
             self.url + "accessories/" + self.real_ID,
@@ -34,29 +55,6 @@ class ThermostatView(ThermostatModel):
             "value": str(value),
         }
 
-        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
-
-        x = requests.put(
-            self.url + "accessories/" + self.real_ID,
-            headers=header,
-            json=data,
-        )
-
-    @property
-    def real_active(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.real_ID,
-            headers=self.auth_headers_dict,
-        )
-        return Active(ac.json()["values"]["Active"])
-
-    @real_active.setter
-    def real_active(self, value: Active):
-
-        data = {
-            "characteristicType": "Active",
-            "value": str(int(value)),
-        }
         header = {**{"Content-Type": "application/json"}, **self.auth_headers}
 
         x = requests.put(

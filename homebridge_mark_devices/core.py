@@ -1,16 +1,17 @@
 # Internal Modules
-import logging
-import typing
-from homebridge_mark_devices.device_types import device_model
-from device_types.thermostat import thermostat_controller
+
+from device_types import device_model
 from shared.c_enums import DeviceType
 from shared.globals import *
-
+from device_types.thermostat import (
+    thermostat_model,
+    thermostat_view,
+    thermostat_controller,
+)
 
 # External Modules
-import sys
 import os
-import pickle
+import logging
 
 
 async def main(io: str, device_name: str, characteristic: str, option: str):
@@ -27,8 +28,19 @@ async def main(io: str, device_name: str, characteristic: str, option: str):
 
     match device_type:
         case DeviceType.AIR_CONDITIONER:
-            device = thermostat_controller.ThermostatController(device_name)
-            result = device.parse_command(io, characteristic, option)
+            match io:
+                case "Get":
+                    device = thermostat_view.ThermostatView(device_name)
+                    result = device.get(characteristic)
+                case "Set":
+                    device = thermostat_controller.ThermostatController(device_name)
+                    result = device.set(characteristic, option)
+                case "Update":
+                    device = thermostat_model.ThermostatModel(device_name)
+                    result = device.update()
+                case _:
+                    result = "Invalid IO"
+
         case DeviceType.APPLE_TV:
             device_path = os.path.join(
                 BASE_PATH, "data", "devices", f"{device_name}.device"
