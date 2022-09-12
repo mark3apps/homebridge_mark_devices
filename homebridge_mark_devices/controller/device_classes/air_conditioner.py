@@ -4,10 +4,10 @@ import requests
 import json
 import os
 
-from library import c_types
+from shared import c_types
 from device_classes.device_config import AirConditionerConfig
-from library.c_enums import *
-from settings import *
+from shared.c_enums import *
+from shared.globals import *
 
 
 class AirConditioner(AirConditionerConfig):

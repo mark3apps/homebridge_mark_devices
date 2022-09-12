@@ -159,5 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-/data/creds/*.json
-/data/devices/*.json
+/homebridge_mark_devices/data/creds/*.json
+/homebridge_mark_devices/data/devices/*.json

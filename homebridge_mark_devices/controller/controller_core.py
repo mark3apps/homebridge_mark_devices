@@ -2,8 +2,9 @@
 import asyncio
 import typing
 from device_classes import air_conditioner, device_config, atv
-from library.c_enums import DeviceType
-from settings import *
+from shared.c_enums import DeviceType
+from shared.globals import *
+
 
 # External Modules
 import sys
@@ -77,7 +78,7 @@ async def main(arguments):
             device.parse_command(io, characteristic, option)
         case DeviceType.APPLE_TV:
             device_path = os.path.join(
-                path(), "data", "devices", f"{device_name}.device"
+                BASE_PATH, "data", "devices", f"{device_name}.device"
             )
 
             # Check if Pickled object exists for this device in the data/devices folder

@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "updateServer",
+            "type": "python",
+            "request": "launch",
+            "program": "update_server",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+        },
+        {
             "name": "Get Current Temperature",
             "type": "python",
             "request": "launch",

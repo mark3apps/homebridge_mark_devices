@@ -1,5 +1,5 @@
 from typing import TypedDict
-import library.c_enums as c_enums
+import shared.c_enums as c_enums
 from pyatv.const import Protocol
 
 ##

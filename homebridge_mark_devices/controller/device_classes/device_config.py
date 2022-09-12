@@ -2,14 +2,16 @@ import os
 import json
 import typing
 
-from library import c_enums, c_types, credentials
-from settings import *
+from shared import c_enums, c_types, credentials
+from shared.globals import *
 
 
 class DeviceConfig:
     def __init__(self, name: str):
         self.name = name
-        self._config_path = os.path.join(path(), "data", "devices", self.name + ".json")
+        self._config_path = os.path.join(
+            BASE_PATH, "data", "devices", self.name + ".json"
+        )
         self.load_config()
         self.cred = credentials.get_cred_json("creds")
         self.auth_headers = credentials.get("creds")
@@ -84,7 +86,7 @@ class ATVConfig(DeviceConfig):
     @property
     def id(self) -> str:
         return self._config["id"]
-    
+
     @id.setter
     def id(self, value):
         self._config["id"] = value
@@ -94,7 +96,7 @@ class ATVConfig(DeviceConfig):
 # Load Homebridge device config values by name
 def getType(name: str):
     with open(
-        os.path.join(path(), "data", "devices", f"{name}.json"),
+        os.path.join(BASE_PATH, "data", "devices", f"{name}.json"),
         "r",
     ) as f:
         config = typing.cast(c_types.BaseDeviceConfig, json.load(f))

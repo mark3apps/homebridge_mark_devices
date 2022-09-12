@@ -1,12 +1,12 @@
 import asyncio
 import typing
 from device_classes.device_config import ATVConfig
-from library import c_enums, c_types
+from shared import c_enums, c_types
 from pyatv.interface import AppleTV
 from pyatv import scan, pair, connect
 from pyatv.const import Protocol
 
-from settings import DEBUG
+from shared.globals import DEBUG
 
 
 class ATV(ATVConfig):
