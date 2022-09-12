@@ -1,15 +1,15 @@
 import asyncio
 import typing
-from device_classes.device_config import ATVConfig
-from shared import c_enums, c_types
-from pyatv.interface import AppleTV
+from .atv_model import ATVCreds, ATVModel
+from shared import c_enums
+
 from pyatv import scan, pair, connect
 from pyatv.const import Protocol
 
 from shared.globals import DEBUG
 
 
-class ATV(ATVConfig):
+class ATVController(ATVModel):
     def __init__(
         self,
         name: str,
@@ -105,7 +105,7 @@ class ATV(ATVConfig):
 
         if pairing.service.credentials:
             creds = typing.cast(
-                c_types.ATVCreds,
+                ATVCreds,
                 {
                     "companion": {
                         "code": pairing.service.credentials,

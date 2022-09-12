@@ -13,21 +13,21 @@ class ThermostatState(IntEnum):
     AUTO = 3
 
 
-class CurrentThermostatState(IntEnum):
+class ThermostatCurrentState(IntEnum):
     OFF = 0
     HEAT = 1
     COOL = 2
 
 
-class CurrentHeaterCoolerState(IntEnum):
+class HeaterCoolerCurrentState(IntEnum):
     OFF = 0
     IDLE = 1
     HEATING = 2
     COOLING = 3
 
 
-class HeaterCoolerState(IntEnum):
-    AUTO = 0
+class HeaterCoolerTargetState(IntEnum):
+    OFF = 0
     HEAT = 1
     COOL = 2
 

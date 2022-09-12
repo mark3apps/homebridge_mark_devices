@@ -1,10 +1,21 @@
 import json
 import os
+from typing import TypedDict
 import requests
 import time
 
 import c_types
 from shared.globals import BASE_PATH
+
+class AuthHeader(TypedDict):
+    accept: str
+    Authorization: str
+
+
+class Credentials(TypedDict):
+    username: str
+    password: str
+    url: str
 
 
 def get(name: str):
@@ -34,12 +45,12 @@ def get(name: str):
 
 def get_cred_json(name: str):
     with open(os.path.join(BASE_PATH, "data", "creds", name + ".json"), "r") as f:
-        cred_json: c_types.Credentials = json.load(f)
+        cred_json: Credentials = json.load(f)
 
     return cred_json
 
 
-def create_token(name: str, cred_json: c_types.Credentials):
+def create_token(name: str, cred_json: Credentials):
     creds = {
         "username": cred_json["username"],
         "password": cred_json["password"],

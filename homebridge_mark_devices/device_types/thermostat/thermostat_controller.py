@@ -1,18 +1,16 @@
-from typing import Any
 import typing
 import requests
-import json
-import os
+from homebridge_mark_devices.device_types.thermostat.thermostat_model import (
+    ThermostatModel,
+)
+
 
 from shared import c_types
-from device_classes.device_config import AirConditionerConfig
 from shared.c_enums import *
 from shared.globals import *
 
 
-class AirConditioner(AirConditionerConfig):
-    auth_headers: c_types.AuthHeader
-
+class ThermostatController(ThermostatModel):
     def __init__(
         self,
         name: str,
@@ -25,103 +23,49 @@ class AirConditioner(AirConditionerConfig):
                 match characteristic:
                     case "CurrentTemperature":
                         self.update_AC()
-                        print(self.get_current_temp())
+                        result = self.current_temperature
                     case "TargetTemperature":
-                        print(float(self.target_temp))
+                        result = self.target_temperature
                     case "CurrentHeatingCoolingState":
-                        print(int(self.current_state))
+                        result = self.current_state
                     case "TargetHeatingCoolingState":
-                        print(int(self.state))
-                    case "CurrentRelativeHumidity":
-                        print(self.get_current_humidity())
+                        result = self.state
                     case "RealState":
-                        print(self.real_state)
+                        result = self.real_state
                     case "RealActive":
-                        print(self.real_active)
+                        result = self.real_active
                     case "OutdoorTemperature":
-                        print(self.outdoor_temp)
+                        result = self.outdoor_temperature
                     case "UpdateAC":
-                        print(self.update_AC())
+                        result = self.update_AC()
+                    case _:
+                        result = "Unknown characteristic"
 
             case "Set":
+                result = ""
+
                 match characteristic:
                     case "TargetTemperature":
-                        self.target_temp = float(option)
-                        exit(0)
+                        self.target_temperature = float(option)
                     case "TargetHeatingCoolingState":
                         self.state = ThermostatState(int(option))
                     case "RealState":
-                        self.real_state = HeaterCoolerState(int(option))
+                        self.real_state = HeaterCoolerTargetState(int(option))
                     case "RealActive":
                         self.real_active = Active(int(option))
+                    case _:
+                        result = "Unknown characteristic"
+            case _:
+                result = "Unknown IO"
 
-        return 0
-
-    @property
-    def auth_headers_dict(self):
-        return typing.cast(dict[str, str], self.auth_headers)
-
-    def get_current_humidity(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.real_ID,
-            headers=self.auth_headers_dict,
-        )
-        return ac.json()["values"]["CurrentRelativeHumidity"]
-
-    @property
-    def real_state(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.real_ID,
-            headers=self.auth_headers_dict,
-        )
-
-        return CurrentHeaterCoolerState(ac.json()["values"]["CurrentHeaterCoolerState"])
-
-    @real_state.setter
-    def real_state(self, value: HeaterCoolerState):
-
-        data = {
-            "characteristicType": "TargetHeaterCoolerState",
-            "value": str(value),
-        }
-
-        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
-
-        x = requests.put(
-            self.url + "accessories/" + self.real_ID,
-            headers=header,
-            json=data,
-        )
-
-    @property
-    def real_active(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.real_ID,
-            headers=self.auth_headers_dict,
-        )
-        return Active(ac.json()["values"]["Active"])
-
-    @real_active.setter
-    def real_active(self, value: Active):
-
-        data = {
-            "characteristicType": "Active",
-            "value": str(int(value)),
-        }
-        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
-
-        x = requests.put(
-            self.url + "accessories/" + self.real_ID,
-            headers=header,
-            json=data,
-        )
+        return str(result)
 
     def update_AC(self):
         real_state = self.real_state
         real_active = self.real_active
-        outdoor_temp = float(self.outdoor_temp)
-        cur_temp = float(self.get_current_temp())
-        target_temp = float(self.target_temp)
+        outdoor_temp = float(self.outdoor_temperature)
+        cur_temp = float(self.current_temperature)
+        target_temp = float(self.target_temperature)
 
         if DEBUG():
             print("State: " + str(self.state))
@@ -143,8 +87,8 @@ class AirConditioner(AirConditionerConfig):
                 print("Heating")
 
             # Set Mode to Heat if not already set
-            if real_state == CurrentHeaterCoolerState.COOLING:
-                self.real_state = HeaterCoolerState.HEAT
+            if real_state == HeaterCoolerCurrentState.COOLING:
+                self.real_state = HeaterCoolerTargetState.HEAT
                 if DEBUG():
                     print("Setting Mode to Heat")
 
@@ -157,7 +101,7 @@ class AirConditioner(AirConditionerConfig):
             # Temp is too Low and Heat is off, Turn Heat on
             if (target_temp - 0.25) > cur_temp and real_active == "0":
                 self.real_active = Active.YES
-                self.set_real_temp("30")
+                self.heater_cooler_temperature = 30
                 if DEBUG():
                     print("Turning on; Temp is too low")
 
@@ -166,9 +110,9 @@ class AirConditioner(AirConditionerConfig):
                 print("Cooling")
 
             # Set Mode to Cool if not already set
-            if real_state == CurrentHeaterCoolerState.HEATING:
-                self.real_state = HeaterCoolerState.COOL
-                self.set_real_temp("16")
+            if real_state == HeaterCoolerCurrentState.HEATING:
+                self.real_state = HeaterCoolerTargetState.COOL
+                self.heater_cooler_temperature = 16
                 if DEBUG():
                     print("Setting Mode to Cool")
 
@@ -181,7 +125,7 @@ class AirConditioner(AirConditionerConfig):
             # Temp is too High and Cool is off, Turn Cool on
             if (target_temp + 0.25) < cur_temp and real_active == Active.NO:
                 self.real_active = Active.YES
-                self.set_real_temp("16")
+                self.heater_cooler_temperature = 16
                 if DEBUG():
                     print("Turning on; Temp is too high")
 
@@ -216,7 +160,7 @@ class AirConditioner(AirConditionerConfig):
             if (
                 target_temp < cur_temp
                 and real_active == Active.YES
-                and real_state == HeaterCoolerState.HEAT
+                and real_state == HeaterCoolerTargetState.HEAT
             ):
                 self.real_active = Active.NO
                 if DEBUG():
@@ -226,10 +170,10 @@ class AirConditioner(AirConditionerConfig):
             elif (
                 target_temp + (4 * weight if weightShift == "cool" else 0.15)
             ) > cur_temp and real_active == Active.NO:
-                self.real_state = HeaterCoolerState.HEAT
+                self.real_state = HeaterCoolerTargetState.HEAT
                 self.real_active = Active.YES
 
-                self.set_real_temp("30")
+                self.heater_cooler_temperature = 30
                 if DEBUG():
                     print("Turning on; Temp is too low")
 
@@ -237,7 +181,7 @@ class AirConditioner(AirConditionerConfig):
             elif (
                 target_temp > cur_temp
                 and real_active == "1"
-                and real_state == CurrentHeaterCoolerState.COOLING
+                and real_state == HeaterCoolerCurrentState.COOLING
             ):
                 self.real_active = Active.NO
                 if DEBUG():
@@ -247,74 +191,26 @@ class AirConditioner(AirConditionerConfig):
             elif (
                 target_temp + (4 * weight if weightShift == "heat" else 0.15)
             ) < cur_temp and real_active == Active.NO:
-                self.real_state = HeaterCoolerState.COOL
+                self.real_state = HeaterCoolerTargetState.COOL
                 self.real_active = Active.YES
 
-                self.set_real_temp("16")
+                self.heater_cooler_temperature = 16
                 if DEBUG():
                     print("Turning on; Temp is too high")
 
     @property
-    def current_state(self) -> CurrentThermostatState:
+    def current_state(self) -> ThermostatCurrentState:
         real_state = self.real_state
 
-        currentState: CurrentThermostatState = CurrentThermostatState.OFF
+        currentState: ThermostatCurrentState = ThermostatCurrentState.OFF
 
-        if real_state == CurrentHeaterCoolerState.COOLING:
-            currentState = CurrentThermostatState.COOL
-        elif real_state == CurrentHeaterCoolerState.HEATING:
-            currentState = CurrentThermostatState.HEAT
-        elif real_state == CurrentHeaterCoolerState.IDLE:
-            currentState = CurrentThermostatState.OFF
-        elif real_state == CurrentHeaterCoolerState.OFF:
-            currentState = CurrentThermostatState.OFF
+        if real_state == HeaterCoolerCurrentState.COOLING:
+            currentState = ThermostatCurrentState.COOL
+        elif real_state == HeaterCoolerCurrentState.HEATING:
+            currentState = ThermostatCurrentState.HEAT
+        elif real_state == HeaterCoolerCurrentState.IDLE:
+            currentState = ThermostatCurrentState.OFF
+        elif real_state == HeaterCoolerCurrentState.OFF:
+            currentState = ThermostatCurrentState.OFF
 
         return currentState
-
-    def set_real_temp(self, value: str):
-        data_heating = {
-            "characteristicType": "HeatingThresholdTemperature",
-            "value": str(value),
-        }
-        data_cooling = {
-            "characteristicType": "CoolingThresholdTemperature",
-            "value": str(value),
-        }
-
-        header = {**{"Content-Type": "application/json"}, **self.auth_headers}
-
-        x = requests.put(
-            self.url + "accessories/" + self.real_ID,
-            headers=header,
-            json=data_heating,
-        )
-        x = requests.put(
-            self.url + "accessories/" + self.real_ID,
-            headers=header,
-            json=data_cooling,
-        )
-
-    def getAccessories(self):
-        x = requests.get(self.url + "accessories", headers=self.auth_headers_dict)
-        return x
-
-    def getDummyTemp(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.dummy_ID,
-            headers=self.auth_headers_dict,
-        )
-        return ac.json()["values"]["CurrentTemperature"]
-
-    def get_current_temp(self):
-        ac = requests.get(
-            self.url + "accessories/" + self.real_ID,
-            headers=self.auth_headers_dict,
-        )
-        return ac.json()["values"]["CurrentTemperature"]
-
-    @property
-    def outdoor_temp(self):
-        x = requests.get(
-            self.url + "accessories/" + self.weatherID, headers=self.auth_headers_dict
-        )
-        return x.json()["values"]["CurrentTemperature"]
