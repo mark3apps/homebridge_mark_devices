@@ -17,7 +17,7 @@ class DeviceModel:
         self._config_path = os.path.join(
             BASE_PATH, "data", "devices", self.name + ".json"
         )
-        self._config = typing.cast(DeviceConfig, self.load_config())
+        self._config = typing.cast(DeviceConfig, self._load_config())
 
     @property
     def type(self) -> c_enums.DeviceType:
@@ -28,7 +28,7 @@ class DeviceModel:
         self._config["type"] = int(value)
         self.save_config()
 
-    def load_config(self):
+    def _load_config(self):
         with open(self._config_path, "r") as f:
             return json.load(f)
 

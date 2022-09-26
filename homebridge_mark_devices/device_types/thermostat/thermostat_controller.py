@@ -18,7 +18,7 @@ class ThermostatController(ThermostatModel):
             case "TargetTemperature":
                 self.target_temperature = float(option)
             case "TargetHeatingCoolingState":
-                self.state = ThermostatState(int(option))
+                self.thermostat_target_state = ThermostatState(int(option))
             case "RealState":
                 self.real_state = HeaterCoolerTargetState(int(option))
             case "RealActive":
@@ -27,20 +27,3 @@ class ThermostatController(ThermostatModel):
                 result = "Unknown characteristic"
 
         return str(result)
-
-    @property
-    def current_state(self) -> ThermostatCurrentState:
-        real_state = self.real_state
-
-        currentState: ThermostatCurrentState = ThermostatCurrentState.OFF
-
-        if real_state == HeaterCoolerCurrentState.COOLING:
-            currentState = ThermostatCurrentState.COOL
-        elif real_state == HeaterCoolerCurrentState.HEATING:
-            currentState = ThermostatCurrentState.HEAT
-        elif real_state == HeaterCoolerCurrentState.IDLE:
-            currentState = ThermostatCurrentState.OFF
-        elif real_state == HeaterCoolerCurrentState.OFF:
-            currentState = ThermostatCurrentState.OFF
-
-        return currentState

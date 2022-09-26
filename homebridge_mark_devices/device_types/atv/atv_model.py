@@ -4,21 +4,22 @@ from pyatv.const import Protocol
 from device_types.device_model import DeviceModel, DeviceConfig
 
 
-class ATVConfig(DeviceConfig):
-    on: int
-    id: str
-    airplay_credentials: str
-    companion_credentials: str
-
-
 class ATVCred(typing.TypedDict):
     code: str
     protocol: Protocol
 
 
 class ATVCreds(typing.TypedDict):
-    airplay: ATVCred
-    companion: ATVCred
+    airplay: str
+    companion: str
+
+
+class ATVConfig(DeviceConfig):
+    on: bool
+    playing: bool
+    media_type: int
+    id: str
+    crendentials: ATVCreds
 
 
 class ATVModel(DeviceModel):

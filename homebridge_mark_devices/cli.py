@@ -1,6 +1,7 @@
 import argparse
 import asyncio
 import logging
+from shared.globals import BASE_PATH
 import task_scheduler
 
 import core
@@ -46,10 +47,8 @@ def main():
     if args.debug:
         logging.basicConfig(
             level=logging.DEBUG,
-            filename="logs/cli.log",
             format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
             datefmt="%H:%M:%S",
-            handlers=[logging.FileHandler("debug.log"), logging.StreamHandler()],
         ),
 
     else:

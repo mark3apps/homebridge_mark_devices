@@ -1,8 +1,8 @@
 {
     "platform": "Cmd4",
     "name": "Cmd4",
-    "debug": false,
-    "interval": 5,
+    "debug": true,
+    "interval": 8,
     "timeout": 12000,
     "stateChangeResponseTime": 3,
     "queueTypes": [
@@ -12,7 +12,7 @@
         },
         {
             "queue": "ThermostatQueue",
-            "queueType": "WoRm"
+            "queueType": "Sequential"
         }
     ],
     "accessories": [
@@ -82,7 +82,7 @@
                     "characteristic": "currentHeatingCoolingState"
                 }
             ],
-            "state_cmd": "python3 /var/lib/homebridge/modules/homebridge_ac/mark_homebridge"
+            "state_cmd": "python3 /homebridge/modules/homebridge_mark_devices/homebridge_mark_devices"
         },
         {
             "type": "Thermostat",
@@ -106,13 +106,13 @@
                     "characteristic": "targetTemperature"
                 },
                 {
-                    "characteristic": "currentHeatingCoolingState"
+                    "characteristic": "targetHeatingCoolingState"
                 },
                 {
-                    "characteristic": "targetHeatingCoolingState"
+                    "characteristic": "currentHeatingCoolingState"
                 }
             ],
-            "state_cmd": "python3 /var/lib/homebridge/modules/homebridge_ac/mark_homebridge"
+            "state_cmd": "python3 /homebridge/modules/homebridge_mark_devices/homebridge_mark_devices"
         }
     ]
 }

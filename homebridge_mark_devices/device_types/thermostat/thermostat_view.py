@@ -15,15 +15,15 @@ class ThermostatView(ThermostatModel):
             case "TargetTemperature":
                 result = self.target_temperature
             case "CurrentHeatingCoolingState":
-                result = self.thermostat_current_state
+                result = int(self.thermostat_current_state)
             case "TargetHeatingCoolingState":
-                result = self.thermostat_target_state
+                result = int(self.thermostat_target_state)
             case "HeaterCoolerTargetState":
-                result = self.heater_cooler_target_state
+                result = int(self.heater_cooler_target_state)
             case "HeaterCoolerCurrentState":
-                result = self.heater_cooler_current_state
+                result = int(self.heater_cooler_current_state)
             case "RealActive":
-                result = self.heater_cooler_active
+                result = int(self.heater_cooler_active)
             case "OutdoorTemperature":
                 result = self.outdoor_temperature
             case _:

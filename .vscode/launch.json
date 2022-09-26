@@ -14,7 +14,7 @@
             "args": [
                 "Get",
                 "Wynter",
-                "CurrentTemperature",
+                "TargetHeatingCoolingState",
                 "-d"
             ]
         },
@@ -28,6 +28,21 @@
             "args": [
                 "Update",
                 "Wynter",
+                "Values",
+                "-d"
+            ]
+        },
+        {
+            "name": "Update Server",
+            "type": "python",
+            "request": "launch",
+            "program": "homebridge_mark_devices",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "Update",
+                "Wynter",
+                "Service",
                 "-d"
             ]
         },

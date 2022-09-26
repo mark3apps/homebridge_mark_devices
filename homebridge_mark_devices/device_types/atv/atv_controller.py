@@ -1,20 +1,26 @@
 import asyncio
 import typing
-from .atv_model import ATVCreds, ATVModel
+from .atv_model import ATVConfig, ATVCred, ATVCreds, ATVModel
 from shared import c_enums
 
 from pyatv import scan, pair, connect
 from pyatv.const import Protocol
+from pyatv.interface import AppleTV, BaseConfig
 
 from shared.globals import DEBUG
 
 
 class ATVController(ATVModel):
+    _config: ATVConfig
+    atv: AppleTV | None
+    atv_config: BaseConfig | None
+
     def __init__(
         self,
         name: str,
     ):
         super().__init__(name)
+        self.load_config()
 
     async def parse_command(self, io: str, characteristic: str, option: str = ""):
         match io:
@@ -31,6 +37,66 @@ class ATVController(ATVModel):
                         await self.set_on(c_enums.SwitchState(option))
                     case "Playing":
                         await self.set_playing(c_enums.SwitchState(option))
+
+    def load_config(self):
+        self._config = typing.cast(ATVConfig, self._load_config())
+
+    async def setup_atv(self):
+
+        self.atv_config = await self.get_atv_config()
+
+        if self.credentials["airplay"] == "" and self.credentials["airplay"] == "":
+            self.credentials = await self.pair_atv()
+
+        self.atv = await self.connect_TV()
+
+        if (
+            self.atv != None
+            and self.credentials["airplay"] != ""
+            and self.atv_config != None
+        ):
+            return True
+
+        return False
+
+    @property
+    def credentials(self):
+        return self._config["crendentials"]
+
+    @credentials.setter
+    def credentials(self, creds: ATVCreds):
+        self._config["crendentials"] = creds
+        self.save_config()
+
+    @property
+    def on(self):
+        return self._config["on"]
+
+    @on.setter
+    def on(self, state: bool):
+        self.load_config()
+        self._config["on"] = state
+        self.save_config()
+
+    @property
+    def playing(self):
+        return self._config["playing"]
+
+    @playing.setter
+    def playing(self, state: bool):
+        self.load_config()
+        self._config["playing"] = state
+        self.save_config()
+
+    @property
+    def media_type(self):
+        return self._config["media_type"]
+
+    @media_type.setter
+    def media_type(self, value: int):
+        self.load_config()
+        self._config["media_type"] = value
+        self.save_config()
 
     async def get_playing(self):
         if self.atv != None:
@@ -61,20 +127,6 @@ class ATVController(ATVModel):
     async def set_on(self, on: c_enums.SwitchState):
         pass
 
-    async def setup_atv(self):
-        self.atv_config = await self.get_atv_config()
-        self.atv_credentials = await self.pair_atv()
-        self.atv = await self.connect_TV()
-
-        if (
-            self.atv != None
-            and self.atv_credentials != None
-            and self.atv_config != None
-        ):
-            return True
-
-        return False
-
     async def get_atv_config(self):
 
         atv = (await scan(asyncio.get_event_loop(), identifier=self.id))[0]
@@ -82,63 +134,72 @@ class ATVController(ATVModel):
 
     async def pair_atv(self):
 
-        atvs = await scan(asyncio.get_event_loop(), identifier=self.id)
+        cred: ATVCreds = {"airplay": "", "companion": ""}
 
-        pairing = await pair(atvs[0], Protocol.Companion, asyncio.get_event_loop())
-        await pairing.begin()
+        if self.atv_config == None:
+            return cred
 
-        if pairing.device_provides_pin:
-            pin = int(input("Enter PIN: "))
-            pairing.pin(pin)
-        else:
-            pairing.pin(1234)  # Should be randomized
-            input("Enter this PIN on the device: 1234")
+        # For loop iterate twice
+        for i in range(2):
+            if i == 1:
+                protocol = Protocol.Companion
+            else:
+                protocol = Protocol.AirPlay
 
-        await pairing.finish()
+            pairing = await pair(self.atv_config, protocol, asyncio.get_event_loop())
+            await pairing.begin()
 
-        # Give some feedback about the process
-        if pairing.has_paired:
-            print("Paired with device!")
-            print("Credentials:", pairing.service.credentials)
-        else:
-            print("Did not pair with device!")
+            if pairing.device_provides_pin:
+                pin = int(input("Enter PIN: "))
+                pairing.pin(pin)
+            else:
+                pairing.pin(1234)  # Should be randomized
+                input("Enter this PIN on the device: 1234")
 
-        if pairing.service.credentials:
-            creds = typing.cast(
-                ATVCreds,
-                {
-                    "companion": {
-                        "code": pairing.service.credentials,
-                        "protocol": Protocol.Companion,
-                    },
-                    "airplay": {
-                        "code": pairing.service.credentials,
-                        "protocol": Protocol.AirPlay,
-                    },
-                },
-            )
-            await pairing.close()
-            return creds
-        else:
-            await pairing.close()
-            return None
+            await pairing.finish()
+
+            # Give some feedback about the process
+            if pairing.has_paired:
+                print("Paired with device!")
+                print("Credentials:", pairing.service.credentials)
+            else:
+                print("Did not pair with device!")
+
+            if pairing.service.credentials:
+                if protocol == Protocol.AirPlay:
+                    cred["airplay"] = pairing.service.credentials
+                else:
+                    cred["companion"] = pairing.service.credentials
+
+                await pairing.close()
+            else:
+                await pairing.close()
+
+        return cred
 
     async def connect_TV(self):
 
-        if self.atv_credentials != None:
+        if self.atv_config == None:
+            return None
+
+        airplay_success: bool = False
+        companion_success: bool = False
+
+        if self.credentials["airplay"] != "":
             airplay_success = self.atv_config.set_credentials(
-                self.atv_credentials["airplay"]["protocol"],
-                self.atv_credentials["airplay"]["code"],
+                Protocol.AirPlay,
+                self.credentials["airplay"],
             )
+        if self.credentials["companion"] != "":
             companion_success = self.atv_config.set_credentials(
-                self.atv_credentials["companion"]["protocol"],
-                self.atv_credentials["companion"]["code"],
+                Protocol.Companion,
+                self.credentials["companion"],
             )
 
-            if airplay_success and companion_success:
+        if airplay_success and companion_success:
 
-                # Connect to the device and print some information
-                atv = await connect(self.atv_config, asyncio.get_event_loop())
-                return atv
+            # Connect to the device and print some information
+            atv = await connect(self.atv_config, asyncio.get_event_loop())
+            return atv
 
         return None

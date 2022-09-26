@@ -31,7 +31,10 @@ async def main(io: str, device_name: str, characteristic: str, option: str):
                     result = device.set(characteristic, option)
                 case "Update":
                     device = thermostat_model.ThermostatModel(device_name)
-                    result = device.update_values()
+                    if characteristic == "Service":
+                        result = device.update_service()
+                    else:
+                        result = device.update_values()
                 case _:
                     result = None
 
