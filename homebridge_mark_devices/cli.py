@@ -1,7 +1,5 @@
 import argparse
-import asyncio
 import logging
-from shared.globals import BASE_PATH
 import task_scheduler
 
 import core
@@ -44,12 +42,12 @@ def main():
     args = parser.parse_args()
 
     # access the arguments
-    if args.debug:
+    if args.debug == True:
         logging.basicConfig(
             level=logging.DEBUG,
             format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
             datefmt="%H:%M:%S",
-        ),
+        )
 
     else:
         logging.basicConfig(level=logging.INFO)
@@ -64,10 +62,12 @@ def main():
 
     if args.io != "Schedule":
         logger.debug("Running Once")
-        result = asyncio.run(
-            core.main(args.io, args.device_name, args.characteristic, args.option)
-        )
-        print(result)
+
+        result = core.main(args.io, args.device_name, args.characteristic, args.option)
+
+        if result != None:
+            print(result)
+
     else:
         logger.debug("Running Scheduler")
         task_scheduler.start(args)

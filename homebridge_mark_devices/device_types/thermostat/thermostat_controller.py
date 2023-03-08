@@ -10,7 +10,7 @@ class ThermostatController(ThermostatModel):
     ):
         super().__init__(name)
 
-    async def set(self, characteristic: str, option: str = ""):
+    def set(self, characteristic: str, option: str = ""):
 
         result = ""
 

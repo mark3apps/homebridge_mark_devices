@@ -8,7 +8,7 @@ class ThermostatView(ThermostatModel):
     def __init__(self, name) -> None:
         super().__init__(name)
 
-    async def get(self, characteristic: str):
+    def get(self, characteristic: str):
         match characteristic:
             case "CurrentTemperature":
                 result = self.current_temperature

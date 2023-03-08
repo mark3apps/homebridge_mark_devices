@@ -1,5 +1,3 @@
-import os
-
 _DEBUG: bool = False
 
 BASE_PATH = (

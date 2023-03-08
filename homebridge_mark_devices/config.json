@@ -1,11 +1,11 @@
 {
     "devices": [
         {
-            "name": "Wynter",
+            "name": "KidsRoomThermostat",
             "type": 1
         },
         {
-            "name": "KidsRoomThermostat",
+            "name": "BedRoomThermostat",
             "type": 1
         }
     ]

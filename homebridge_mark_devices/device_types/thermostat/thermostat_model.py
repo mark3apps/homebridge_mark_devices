@@ -1,4 +1,3 @@
-from ast import Pass
 import logging
 import typing
 import requests
@@ -35,6 +34,9 @@ class ThermostatModel(DeviceModel):
     _cred: credentials.Credentials | None = None
     _auth_headers: credentials.AuthHeader | None = None
     _config: ThermostatConfig
+
+    low_temp = 16.1
+    high_temp = 26.1
 
     def __init__(self, name: str):
         super().__init__(name)
@@ -78,7 +80,7 @@ class ThermostatModel(DeviceModel):
     #
 
     def load_config(self):
-        self._config = typing.cast(ThermostatConfig, self._load_config())
+        return typing.cast(ThermostatConfig, self._load_config())
 
     #
     # VALUES
@@ -233,48 +235,48 @@ class ThermostatModel(DeviceModel):
         )
         return ac.json()["values"]
 
-    async def update(self):
-        await self.update_values()
-        await self.update_service()
+    def update(self):
+        self.update_values()
+        self.update_service()
 
-    async def update_values(self):
+    def update_values(self):
         dummy_AC = self.get_accessory(self.real_ID)
 
-        self._config = typing.cast(ThermostatConfig, self.load_config())
+        self._config = self.load_config()
         self._config["values"]["heater_cooler_current_state"] = int(
             dummy_AC["CurrentHeaterCoolerState"]
         )
-        self._config["values"]["heater_cooler_active"] = int(dummy_AC["Active"])
+        self._config["values"]["heater_cooler_active"] = dummy_AC["Active"]
         self._config["values"]["heater_cooler_temperature"] = dummy_AC[
             "HeatingThresholdTemperature"
         ]
         self._config["values"]["current_temperature"] = dummy_AC["CurrentTemperature"]
         self._config["values"]["outdoor_temperature"] = dummy_AC["CurrentTemperature"]
 
-        heater_cooler_state = self.heater_cooler_current_state
-
-        thermostat_current_state: ThermostatCurrentState = ThermostatCurrentState.OFF
-
-        if heater_cooler_state == HeaterCoolerCurrentState.COOLING:
-            thermostat_current_state = ThermostatCurrentState.COOL
-        elif heater_cooler_state == HeaterCoolerCurrentState.HEATING:
+        if self.thermostat_target_state == ThermostatState.HEAT and self.heater_cooler_temperature != self.low_temp:
             thermostat_current_state = ThermostatCurrentState.HEAT
-        elif heater_cooler_state == HeaterCoolerCurrentState.IDLE:
-            thermostat_current_state = ThermostatCurrentState.OFF
-        elif heater_cooler_state == HeaterCoolerCurrentState.OFF:
-            thermostat_current_state = ThermostatCurrentState.OFF
+                
+        elif self.thermostat_target_state == ThermostatState.COOL and self.heater_cooler_temperature != self.high_temp:
+            thermostat_current_state = ThermostatCurrentState.COOL
+        
+        else:
+            thermostat_current_state: ThermostatCurrentState = ThermostatCurrentState.OFF
+            
 
         self._config["values"]["thermostat_current_state"] = thermostat_current_state
 
         self.save_config()
         return True
 
-    async def update_service(self):
+    def update_service(self):
+
         heater_cooler_target_state = self.heater_cooler_target_state
         heater_cooler_active = self.heater_cooler_active
         outdoor_temperature = float(self.outdoor_temperature)
         current_temperature = float(self.current_temperature)
         target_temperature = float(self.target_temperature)
+
+        
 
         logging.debug("thermostat_target_state: " + str(self.thermostat_target_state))
         logging.debug("heater_cooler_target_state: " + str(heater_cooler_target_state))
@@ -282,6 +284,12 @@ class ThermostatModel(DeviceModel):
         logging.debug("current_temperature: " + str(current_temperature))
         logging.debug("target_temperature: " + str(target_temperature))
         logging.debug("outdoor_temperature: " + str(outdoor_temperature))
+        logging.debug("low Temp: " + str(self.low_temp))
+        logging.debug("high Temp: " + str(self.high_temp))
+        logging.debug("real target temp: " + str(self.heater_cooler_temperature))
+        logging.debug("low Temp Matches Target: " + str(str(self.low_temp) == str(self.heater_cooler_temperature)))
+        logging.debug("high Temp Matches Target: " + str(str(self.high_temp) == str(self.heater_cooler_temperature)))
+        logging.debug("Heater Cooler Active == On: " + str(heater_cooler_active == SwitchState.ON))
 
         if self.thermostat_target_state == ThermostatState.OFF:  # Off
             if heater_cooler_active == SwitchState.ON:
@@ -292,6 +300,11 @@ class ThermostatModel(DeviceModel):
         elif self.thermostat_target_state == ThermostatState.HEAT:  # Heating
 
             logging.debug("Heating")
+            
+            if heater_cooler_active != SwitchState.ON:
+                self.heater_cooler_active = Active.NO
+
+                logging.debug("Turning on")
 
             # Set Mode to Heat if not already set
             if heater_cooler_target_state != HeaterCoolerTargetState.HEAT:
@@ -302,18 +315,17 @@ class ThermostatModel(DeviceModel):
             # Temp is too High and Heat is on, Turn Heat off
             if (
                 target_temperature < current_temperature
-                and heater_cooler_active == Active.YES
+                and self.heater_cooler_temperature != self.low_temp
             ):
-                self.heater_cooler_active = Active.NO
+                self.heater_cooler_temperature = self.low_temp
 
                 logging.debug("Turning off; Temp is too high")
 
-            # Temp is too Low and Heat is off, Turn Heat on
+            # Temp is too Low and temp is not Low_temp, Turn Heat on
             if (
                 target_temperature - 0.25
-            ) > current_temperature and heater_cooler_active == Active.NO:
-                self.heater_cooler_active = Active.YES
-                self.heater_cooler_temperature = 30
+            ) > current_temperature and self.heater_cooler_temperature != self.high_temp:
+                self.heater_cooler_temperature = self.high_temp
 
                 logging.debug("Turning on; Temp is too low")
 
@@ -321,28 +333,31 @@ class ThermostatModel(DeviceModel):
 
             logging.debug("Cooling")
 
+            if heater_cooler_active != SwitchState.ON:
+                self.heater_cooler_active = Active.NO
+
+                logging.debug("Turning on")
+
             # Set Mode to Cool if not already set
             if heater_cooler_target_state != HeaterCoolerTargetState.COOL:
                 self.heater_cooler_target_state = HeaterCoolerTargetState.COOL
-                self.heater_cooler_temperature = 16
 
                 logging.debug("Setting Mode to Cool")
 
             # Temp is too Low and Cool is on, Turn Cool off
             if (
                 target_temperature > current_temperature
-                and heater_cooler_active == Active.YES
+                and self.heater_cooler_temperature != self.high_temp
             ):
-                self.heater_cooler_active = Active.NO
+                self.heater_cooler_temperature = self.high_temp
 
                 logging.debug("Turning off; Temp is too low")
 
             # Temp is too High and Cool is off, Turn Cool on
             if (
                 target_temperature + 0.25
-            ) < current_temperature and heater_cooler_active == Active.NO:
-                self.heater_cooler_active = Active.YES
-                self.heater_cooler_temperature = 16
+            ) < current_temperature and self.heater_cooler_temperature != self.low_temp:
+                self.heater_cooler_temperature = self.low_temp
 
                 logging.debug("Turning on; Temp is too high")
 

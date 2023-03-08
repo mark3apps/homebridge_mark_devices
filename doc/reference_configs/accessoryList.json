@@ -30,7 +30,7 @@
             "Model": "homebridge",
             "Name": "Homebridge 6E6C 2448",
             "Serial Number": "0E:CC:78:46:6E:6C",
-            "Firmware Revision": "1.5.0"
+            "Firmware Revision": "1.6.0"
         },
         "values": {
             "Version": "1.1.0"
@@ -61,7 +61,7 @@
                 "serviceType": "TemperatureSensor",
                 "serviceName": "Temperature",
                 "description": "Current Temperature",
-                "value": 25.4,
+                "value": 11.5,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -81,10 +81,10 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
-            "CurrentTemperature": 25.4
+            "CurrentTemperature": 11.5
         },
         "instance": {
             "name": "homebridge",
@@ -102,7 +102,7 @@
         "uuid": "00000086-0000-1000-8000-0026BB765291",
         "type": "OccupancySensor",
         "humanType": "Occupancy Sensor",
-        "serviceName": "Air Pressure: 1011 hPa",
+        "serviceName": "Air Pressure: 1019 hPa",
         "serviceCharacteristics": [
             {
                 "aid": 33,
@@ -110,7 +110,7 @@
                 "uuid": "00000071-0000-1000-8000-0026BB765291",
                 "type": "OccupancyDetected",
                 "serviceType": "OccupancySensor",
-                "serviceName": "Air Pressure: 1011 hPa",
+                "serviceName": "Air Pressure: 1019 hPa",
                 "description": "Occupancy Detected",
                 "value": 1,
                 "format": "uint8",
@@ -131,7 +131,7 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 1
@@ -152,7 +152,7 @@
         "uuid": "00000086-0000-1000-8000-0026BB765291",
         "type": "OccupancySensor",
         "humanType": "Occupancy Sensor",
-        "serviceName": "Cloud Cover: 75",
+        "serviceName": "Cloud Cover: 100",
         "serviceCharacteristics": [
             {
                 "aid": 33,
@@ -160,7 +160,7 @@
                 "uuid": "00000071-0000-1000-8000-0026BB765291",
                 "type": "OccupancyDetected",
                 "serviceType": "OccupancySensor",
-                "serviceName": "Cloud Cover: 75",
+                "serviceName": "Cloud Cover: 100",
                 "description": "Occupancy Detected",
                 "value": 1,
                 "format": "uint8",
@@ -181,7 +181,7 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 1
@@ -212,7 +212,7 @@
                 "serviceType": "TemperatureSensor",
                 "serviceName": "Dew Point",
                 "description": "Current Temperature",
-                "value": 21,
+                "value": 0,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -232,10 +232,10 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
-            "CurrentTemperature": 21
+            "CurrentTemperature": 0
         },
         "instance": {
             "name": "homebridge",
@@ -263,7 +263,7 @@
                 "serviceType": "HumiditySensor",
                 "serviceName": "Humidity",
                 "description": "Current Relative Humidity",
-                "value": 79,
+                "value": 88,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -283,10 +283,10 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
-            "CurrentRelativeHumidity": 79
+            "CurrentRelativeHumidity": 88
         },
         "instance": {
             "name": "homebridge",
@@ -333,7 +333,7 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 0
@@ -383,7 +383,7 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 0
@@ -414,7 +414,7 @@
                 "serviceType": "TemperatureSensor",
                 "serviceName": "Apparent Temperature",
                 "description": "Current Temperature",
-                "value": 26,
+                "value": 10,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -434,10 +434,10 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
-            "CurrentTemperature": 26
+            "CurrentTemperature": 10
         },
         "instance": {
             "name": "homebridge",
@@ -455,7 +455,7 @@
         "uuid": "00000086-0000-1000-8000-0026BB765291",
         "type": "OccupancySensor",
         "humanType": "Occupancy Sensor",
-        "serviceName": "UV Index: 3",
+        "serviceName": "UV Index",
         "serviceCharacteristics": [
             {
                 "aid": 33,
@@ -463,57 +463,7 @@
                 "uuid": "00000071-0000-1000-8000-0026BB765291",
                 "type": "OccupancyDetected",
                 "serviceType": "OccupancySensor",
-                "serviceName": "UV Index: 3",
-                "description": "Occupancy Detected",
-                "value": 1,
-                "format": "uint8",
-                "perms": [
-                    "ev",
-                    "pr"
-                ],
-                "maxValue": 1,
-                "minValue": 0,
-                "minStep": 1,
-                "canRead": true,
-                "canWrite": false,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "github.com naofireblade",
-            "Model": "Powered by OpenWeatherMap",
-            "Name": "Los Angeles",
-            "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
-        },
-        "values": {
-            "OccupancyDetected": 1
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "3391ece9798d77d2610326a7c5c3c49acdf39f88b2037ca931eaaa654fe74683"
-    },
-    {
-        "aid": 33,
-        "iid": 45,
-        "uuid": "00000086-0000-1000-8000-0026BB765291",
-        "type": "OccupancySensor",
-        "humanType": "Occupancy Sensor",
-        "serviceName": "Wind Dir: SW",
-        "serviceCharacteristics": [
-            {
-                "aid": 33,
-                "iid": 47,
-                "uuid": "00000071-0000-1000-8000-0026BB765291",
-                "type": "OccupancyDetected",
-                "serviceType": "OccupancySensor",
-                "serviceName": "Wind Dir: SW",
+                "serviceName": "UV Index",
                 "description": "Occupancy Detected",
                 "value": 0,
                 "format": "uint8",
@@ -534,7 +484,57 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
+        },
+        "values": {
+            "OccupancyDetected": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "3391ece9798d77d2610326a7c5c3c49acdf39f88b2037ca931eaaa654fe74683"
+    },
+    {
+        "aid": 33,
+        "iid": 45,
+        "uuid": "00000086-0000-1000-8000-0026BB765291",
+        "type": "OccupancySensor",
+        "humanType": "Occupancy Sensor",
+        "serviceName": "Wind Dir: NW",
+        "serviceCharacteristics": [
+            {
+                "aid": 33,
+                "iid": 47,
+                "uuid": "00000071-0000-1000-8000-0026BB765291",
+                "type": "OccupancyDetected",
+                "serviceType": "OccupancySensor",
+                "serviceName": "Wind Dir: NW",
+                "description": "Occupancy Detected",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "github.com naofireblade",
+            "Model": "Powered by OpenWeatherMap",
+            "Name": "Los Angeles",
+            "Serial Number": "openweathermap - Inglewood, US",
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 0
@@ -555,7 +555,7 @@
         "uuid": "00000086-0000-1000-8000-0026BB765291",
         "type": "OccupancySensor",
         "humanType": "Occupancy Sensor",
-        "serviceName": "Wind Speed: 10.36 mph",
+        "serviceName": "Wind Speed: 6.91 mph",
         "serviceCharacteristics": [
             {
                 "aid": 33,
@@ -563,7 +563,7 @@
                 "uuid": "00000071-0000-1000-8000-0026BB765291",
                 "type": "OccupancyDetected",
                 "serviceType": "OccupancySensor",
-                "serviceName": "Wind Speed: 10.36 mph",
+                "serviceName": "Wind Speed: 6.91 mph",
                 "description": "Occupancy Detected",
                 "value": 0,
                 "format": "uint8",
@@ -584,7 +584,7 @@
             "Model": "Powered by OpenWeatherMap",
             "Name": "Los Angeles",
             "Serial Number": "openweathermap - Inglewood, US",
-            "Firmware Revision": "3.2.6"
+            "Firmware Revision": "3.2.11"
         },
         "values": {
             "OccupancyDetected": 0
@@ -634,7 +634,7 @@
             "Model": "Default-Model",
             "Name": "Bath Room Occupancy",
             "Serial Number": "JmoMagicOccupancySwitch",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "OccupancyDetected": 0
@@ -682,7 +682,7 @@
             "Model": "Default-Model",
             "Name": "Bath Room Occupancy",
             "Serial Number": "JmoMagicOccupancySwitch",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "On": 0
@@ -696,6 +696,54 @@
             "connectionFailedCount": 0
         },
         "uniqueId": "63df6b700a0509a43ba98c1814b835053628f0b42e3d76368e6e048c2b4f61c6"
+    },
+    {
+        "aid": 62,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Windows PC",
+        "serviceCharacteristics": [
+            {
+                "aid": 62,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Windows PC",
+                "description": "On",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Asus",
+            "Model": "Computer",
+            "Name": "Windows PC",
+            "Serial Number": "ijoefr93",
+            "Firmware Revision": "5.0.2"
+        },
+        "values": {
+            "On": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "234c43add120b4687ced2d595fd5ded647c0128c489a415f615e32437058985d"
     },
     {
         "aid": 42,
@@ -732,7 +780,7 @@
             "Model": "Default-Model",
             "Name": "Kitchen Occupancy",
             "Serial Number": "kitchenOccupancySwitch",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "OccupancyDetected": 0
@@ -780,7 +828,7 @@
             "Model": "Default-Model",
             "Name": "Kitchen Occupancy",
             "Serial Number": "kitchenOccupancySwitch",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "On": 0
@@ -830,7 +878,7 @@
             "Model": "Default-Model",
             "Name": "Living Room Occupancy",
             "Serial Number": "testing123",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "OccupancyDetected": 1
@@ -861,7 +909,7 @@
                 "serviceType": "Switch",
                 "serviceName": "Living Room Occupancy Motion",
                 "description": "On",
-                "value": 0,
+                "value": 1,
                 "format": "bool",
                 "perms": [
                     "ev",
@@ -878,10 +926,10 @@
             "Model": "Default-Model",
             "Name": "Living Room Occupancy",
             "Serial Number": "testing123",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
-            "On": 0
+            "On": 1
         },
         "instance": {
             "name": "homebridge",
@@ -892,104 +940,6 @@
             "connectionFailedCount": 0
         },
         "uniqueId": "a3675cfe24248728e464244b4f0d4c931842caa4e8e40fb9366245124bb736ee"
-    },
-    {
-        "aid": 60,
-        "iid": 8,
-        "uuid": "00000086-0000-1000-8000-0026BB765291",
-        "type": "OccupancySensor",
-        "humanType": "Occupancy Sensor",
-        "serviceName": "Front Door Occupancy",
-        "serviceCharacteristics": [
-            {
-                "aid": 60,
-                "iid": 10,
-                "uuid": "00000071-0000-1000-8000-0026BB765291",
-                "type": "OccupancyDetected",
-                "serviceType": "OccupancySensor",
-                "serviceName": "Front Door Occupancy",
-                "description": "Occupancy Detected",
-                "value": 0,
-                "format": "uint8",
-                "perms": [
-                    "ev",
-                    "pr"
-                ],
-                "maxValue": 1,
-                "minValue": 0,
-                "minStep": 1,
-                "canRead": true,
-                "canWrite": false,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
-            "Model": "Default-Model",
-            "Name": "Front Door Occupancy",
-            "Serial Number": "frontDoor1023",
-            "Firmware Revision": "3.2.0"
-        },
-        "values": {
-            "OccupancyDetected": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "f3fff6e2f97219dcf51cde98a9fcc243c69d35feef1ad61aedaede0c5769ec9f"
-    },
-    {
-        "aid": 60,
-        "iid": 13,
-        "uuid": "00000049-0000-1000-8000-0026BB765291",
-        "type": "Switch",
-        "humanType": "Switch",
-        "serviceName": "Front Door Occupancy Motion",
-        "serviceCharacteristics": [
-            {
-                "aid": 60,
-                "iid": 15,
-                "uuid": "00000025-0000-1000-8000-0026BB765291",
-                "type": "On",
-                "serviceType": "Switch",
-                "serviceName": "Front Door Occupancy Motion",
-                "description": "On",
-                "value": 0,
-                "format": "bool",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "https://github.com/Jason-Morcos/homebridge-magic-occupancy",
-            "Model": "Default-Model",
-            "Name": "Front Door Occupancy",
-            "Serial Number": "frontDoor1023",
-            "Firmware Revision": "3.2.0"
-        },
-        "values": {
-            "On": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "9ade43c2cbf7fdf2981d74670f885debb2117742b1c5f8471e3e467021bb2d41"
     },
     {
         "aid": 61,
@@ -1026,7 +976,7 @@
             "Model": "Default-Model",
             "Name": "Kid's Room Occupancy",
             "Serial Number": "kidsroom295324",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
         },
         "values": {
             "OccupancyDetected": 1
@@ -1057,7 +1007,7 @@
                 "serviceType": "Switch",
                 "serviceName": "Kid's Room Occupancy Motion",
                 "description": "On",
-                "value": 0,
+                "value": 1,
                 "format": "bool",
                 "perms": [
                     "ev",
@@ -1074,7 +1024,55 @@
             "Model": "Default-Model",
             "Name": "Kid's Room Occupancy",
             "Serial Number": "kidsroom295324",
-            "Firmware Revision": "3.2.0"
+            "Firmware Revision": "3.2.1"
+        },
+        "values": {
+            "On": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "b62057026e2f3a218b305d7dd0c63069fb1c56d795eb38f6a34bca419fc75982"
+    },
+    {
+        "aid": 74,
+        "iid": 12,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Gaming",
+        "serviceCharacteristics": [
+            {
+                "aid": 74,
+                "iid": 14,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Gaming",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Homebridge",
+            "Model": "Dummy Switch",
+            "Name": "Gaming",
+            "Serial Number": "Dummy-Gaming",
+            "Firmware Revision": "0.9.0"
         },
         "values": {
             "On": 0
@@ -1087,7 +1085,103 @@
             "services": [],
             "connectionFailedCount": 0
         },
-        "uniqueId": "b62057026e2f3a218b305d7dd0c63069fb1c56d795eb38f6a34bca419fc75982"
+        "uniqueId": "486d10ed0800c68162c9a96d8c7f6ae2c4877d82beb44fcd39bf3d91be70fec9"
+    },
+    {
+        "aid": 76,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Movie",
+        "serviceCharacteristics": [
+            {
+                "aid": 76,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Movie",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Homebridge",
+            "Model": "Dummy Switch",
+            "Name": "Movie",
+            "Serial Number": "Dummy-Movie",
+            "Firmware Revision": "0.9.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "034b10d0b726fe8b6ce082731a587b0143f23875b6246ca63f83732b16f82445"
+    },
+    {
+        "aid": 81,
+        "iid": 8,
+        "uuid": "00000049-0000-1000-8000-0026BB765291",
+        "type": "Switch",
+        "humanType": "Switch",
+        "serviceName": "Shower",
+        "serviceCharacteristics": [
+            {
+                "aid": 81,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Switch",
+                "serviceName": "Shower",
+                "description": "On",
+                "value": 0,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Homebridge",
+            "Model": "Dummy Switch",
+            "Name": "Shower",
+            "Serial Number": "Dummy-Shower",
+            "Firmware Revision": "0.9.0"
+        },
+        "values": {
+            "On": 0
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "e8921d88adb3c35835c8254b56734a5d8e8dbd67c4b4bfc9182eff1c740f27aa"
     },
     {
         "aid": 2,
@@ -1105,7 +1199,7 @@
                 "serviceType": "Outlet",
                 "serviceName": "Bed Room Heater Plug",
                 "description": "On",
-                "value": 1,
+                "value": 0,
                 "format": "bool",
                 "perms": [
                     "ev",
@@ -1124,7 +1218,7 @@
                 "serviceType": "Outlet",
                 "serviceName": "Bed Room Heater Plug",
                 "description": "Outlet In Use",
-                "value": 1,
+                "value": 0,
                 "format": "bool",
                 "perms": [
                     "ev",
@@ -1144,8 +1238,8 @@
             "Hardware Revision": "2.0"
         },
         "values": {
-            "On": 1,
-            "OutletInUse": 1
+            "On": 0,
+            "OutletInUse": 0
         },
         "instance": {
             "name": "homebridge",
@@ -1226,198 +1320,6 @@
         "uniqueId": "7f8e1b3f54b9808d06ff029aaf838c3b2a215fb459644d6c690f18181bb5123a"
     },
     {
-        "aid": 11,
-        "iid": 8,
-        "uuid": "00000049-0000-1000-8000-0026BB765291",
-        "type": "Switch",
-        "humanType": "Switch",
-        "serviceName": "Living Room TV Playing",
-        "serviceCharacteristics": [
-            {
-                "aid": 11,
-                "iid": 10,
-                "uuid": "00000025-0000-1000-8000-0026BB765291",
-                "type": "On",
-                "serviceType": "Switch",
-                "serviceName": "Living Room TV Playing",
-                "description": "On",
-                "value": 0,
-                "format": "bool",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "Default-Manufacturer",
-            "Model": "Default-Model",
-            "Name": "Living Room TV Playing",
-            "Serial Number": "Default-SerialNumber",
-            "Firmware Revision": "6.3.0"
-        },
-        "values": {
-            "On": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "4801f9b1dd5d4b766255f8bb564eac6c89de008b977370185912237a7c4747a3"
-    },
-    {
-        "aid": 12,
-        "iid": 8,
-        "uuid": "00000049-0000-1000-8000-0026BB765291",
-        "type": "Switch",
-        "humanType": "Switch",
-        "serviceName": "Living Room TV Power",
-        "serviceCharacteristics": [
-            {
-                "aid": 12,
-                "iid": 10,
-                "uuid": "00000025-0000-1000-8000-0026BB765291",
-                "type": "On",
-                "serviceType": "Switch",
-                "serviceName": "Living Room TV Power",
-                "description": "On",
-                "value": 0,
-                "format": "bool",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "Default-Manufacturer",
-            "Model": "Default-Model",
-            "Name": "Living Room TV Power",
-            "Serial Number": "Default-SerialNumber",
-            "Firmware Revision": "6.3.0"
-        },
-        "values": {
-            "On": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "74784419b82927897a6182cc7228da89f0f183f7a64e138749e2027becc5aef5"
-    },
-    {
-        "aid": 13,
-        "iid": 8,
-        "uuid": "00000049-0000-1000-8000-0026BB765291",
-        "type": "Switch",
-        "humanType": "Switch",
-        "serviceName": "Bed Room TV Playing",
-        "serviceCharacteristics": [
-            {
-                "aid": 13,
-                "iid": 10,
-                "uuid": "00000025-0000-1000-8000-0026BB765291",
-                "type": "On",
-                "serviceType": "Switch",
-                "serviceName": "Bed Room TV Playing",
-                "description": "On",
-                "value": 0,
-                "format": "bool",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "Default-Manufacturer",
-            "Model": "Default-Model",
-            "Name": "Bed Room TV Playing",
-            "Serial Number": "Default-SerialNumber",
-            "Firmware Revision": "6.3.0"
-        },
-        "values": {
-            "On": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "24afb7147fff8890f3a70a2a79294e41800d11e684fede14c0ff84e18cb08d8a"
-    },
-    {
-        "aid": 14,
-        "iid": 8,
-        "uuid": "00000049-0000-1000-8000-0026BB765291",
-        "type": "Switch",
-        "humanType": "Switch",
-        "serviceName": "Bed Room TV Power",
-        "serviceCharacteristics": [
-            {
-                "aid": 14,
-                "iid": 10,
-                "uuid": "00000025-0000-1000-8000-0026BB765291",
-                "type": "On",
-                "serviceType": "Switch",
-                "serviceName": "Bed Room TV Power",
-                "description": "On",
-                "value": 0,
-                "format": "bool",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "Default-Manufacturer",
-            "Model": "Default-Model",
-            "Name": "Bed Room TV Power",
-            "Serial Number": "Default-SerialNumber",
-            "Firmware Revision": "6.3.0"
-        },
-        "values": {
-            "On": 0
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "f395f099994a216ce085e512154cbbbe2eda4412a5162adbb558220c3efdf2ec"
-    },
-    {
         "aid": 17,
         "iid": 48,
         "uuid": "000000BC-0000-1000-8000-0026BB765291",
@@ -1455,7 +1357,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Current Heater-Cooler State",
-                "value": 3,
+                "value": 2,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -1476,7 +1378,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Target Heater-Cooler State",
-                "value": 2,
+                "value": 1,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -1498,7 +1400,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Current Temperature",
-                "value": 22.1,
+                "value": 21.8,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1520,7 +1422,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Cooling Threshold Temperature",
-                "value": 16.1,
+                "value": 20,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1543,7 +1445,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Heating Threshold Temperature",
-                "value": 16.1,
+                "value": 20,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1588,7 +1490,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Current Relative Humidity",
-                "value": 54,
+                "value": 39,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1610,7 +1512,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "bedroom AC",
                 "description": "Swing Mode",
-                "value": 1,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -1714,18 +1616,18 @@
             "Model": "skyv2",
             "Name": "bedroom AC",
             "Serial Number": "392105167",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
             "Active": 1,
-            "CurrentHeaterCoolerState": 3,
-            "TargetHeaterCoolerState": 2,
-            "CurrentTemperature": 22.1,
-            "CoolingThresholdTemperature": 16.1,
-            "HeatingThresholdTemperature": 16.1,
+            "CurrentHeaterCoolerState": 2,
+            "TargetHeaterCoolerState": 1,
+            "CurrentTemperature": 21.8,
+            "CoolingThresholdTemperature": 20,
+            "HeatingThresholdTemperature": 20,
             "TemperatureDisplayUnits": 1,
-            "CurrentRelativeHumidity": 54,
-            "SwingMode": 1,
+            "CurrentRelativeHumidity": 39,
+            "SwingMode": 0,
             "RotationSpeed": 100,
             "FilterChangeIndication": 1,
             "FilterLifeLevel": 0
@@ -1821,7 +1723,7 @@
                 "serviceType": "HumidifierDehumidifier",
                 "serviceName": "bedroom Dry",
                 "description": "Current Relative Humidity",
-                "value": 54,
+                "value": 39,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1886,13 +1788,13 @@
             "Model": "skyv2",
             "Name": "bedroom AC",
             "Serial Number": "392105167",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
             "Active": 0,
             "CurrentHumidifierDehumidifierState": 0,
             "TargetHumidifierDehumidifierState": 2,
-            "CurrentRelativeHumidity": 54,
+            "CurrentRelativeHumidity": 39,
             "SwingMode": 0,
             "RotationSpeed": 100
         },
@@ -1922,7 +1824,7 @@
                 "serviceType": "Switch",
                 "serviceName": "Kids are Home",
                 "description": "On",
-                "value": 0,
+                "value": 1,
                 "format": "bool",
                 "perms": [
                     "ev",
@@ -1942,7 +1844,7 @@
             "Firmware Revision": "6.3.0"
         },
         "values": {
-            "On": 0
+            "On": 1
         },
         "instance": {
             "name": "homebridge",
@@ -1970,7 +1872,7 @@
                 "serviceType": "HumiditySensor",
                 "serviceName": "bedroom Humidity",
                 "description": "Current Relative Humidity",
-                "value": 54,
+                "value": 39,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -1990,10 +1892,10 @@
             "Model": "skyv2_humidity",
             "Name": "bedroom Humidity",
             "Serial Number": "392105167_humidity",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
-            "CurrentRelativeHumidity": 54
+            "CurrentRelativeHumidity": 39
         },
         "instance": {
             "name": "homebridge",
@@ -2004,149 +1906,6 @@
             "connectionFailedCount": 0
         },
         "uniqueId": "d88db1832a9c8376c411058069216b9085d67be1be6cbe3afb55f5f8b8caff72"
-    },
-    {
-        "aid": 54,
-        "iid": 8,
-        "uuid": "0000004A-0000-1000-8000-0026BB765291",
-        "type": "Thermostat",
-        "humanType": "Thermostat",
-        "serviceName": "Wynter",
-        "serviceCharacteristics": [
-            {
-                "aid": 54,
-                "iid": 10,
-                "uuid": "0000000F-0000-1000-8000-0026BB765291",
-                "type": "CurrentHeatingCoolingState",
-                "serviceType": "Thermostat",
-                "serviceName": "Wynter",
-                "description": "Current Heating Cooling State",
-                "value": 2,
-                "format": "uint8",
-                "perms": [
-                    "ev",
-                    "pr"
-                ],
-                "maxValue": 3,
-                "minValue": 0,
-                "minStep": 1,
-                "canRead": true,
-                "canWrite": false,
-                "ev": true
-            },
-            {
-                "aid": 54,
-                "iid": 11,
-                "uuid": "00000033-0000-1000-8000-0026BB765291",
-                "type": "TargetHeatingCoolingState",
-                "serviceType": "Thermostat",
-                "serviceName": "Wynter",
-                "description": "Target Heating Cooling State",
-                "value": 2,
-                "format": "uint8",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "maxValue": 3,
-                "minValue": 0,
-                "minStep": 1,
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            },
-            {
-                "aid": 54,
-                "iid": 12,
-                "uuid": "00000011-0000-1000-8000-0026BB765291",
-                "type": "CurrentTemperature",
-                "serviceType": "Thermostat",
-                "serviceName": "Wynter",
-                "description": "Current Temperature",
-                "value": 22.1,
-                "format": "float",
-                "perms": [
-                    "ev",
-                    "pr"
-                ],
-                "unit": "celsius",
-                "maxValue": 100,
-                "minValue": -270,
-                "minStep": 0.1,
-                "canRead": true,
-                "canWrite": false,
-                "ev": true
-            },
-            {
-                "aid": 54,
-                "iid": 13,
-                "uuid": "00000035-0000-1000-8000-0026BB765291",
-                "type": "TargetTemperature",
-                "serviceType": "Thermostat",
-                "serviceName": "Wynter",
-                "description": "Target Temperature",
-                "value": 21.1,
-                "format": "float",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "unit": "celsius",
-                "maxValue": 38,
-                "minValue": 10,
-                "minStep": 0.1,
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            },
-            {
-                "aid": 54,
-                "iid": 14,
-                "uuid": "00000036-0000-1000-8000-0026BB765291",
-                "type": "TemperatureDisplayUnits",
-                "serviceType": "Thermostat",
-                "serviceName": "Wynter",
-                "description": "Temperature Display Units",
-                "value": 1,
-                "format": "uint8",
-                "perms": [
-                    "ev",
-                    "pr",
-                    "pw"
-                ],
-                "maxValue": 1,
-                "minValue": 0,
-                "minStep": 1,
-                "canRead": true,
-                "canWrite": true,
-                "ev": true
-            }
-        ],
-        "accessoryInformation": {
-            "Manufacturer": "Wynter",
-            "Model": "e-zone",
-            "Name": "Wynter",
-            "Serial Number": "Wynter e-zone2",
-            "Firmware Revision": "6.3.0"
-        },
-        "values": {
-            "CurrentHeatingCoolingState": 2,
-            "TargetHeatingCoolingState": 2,
-            "CurrentTemperature": 22.1,
-            "TargetTemperature": 21.1,
-            "TemperatureDisplayUnits": 1
-        },
-        "instance": {
-            "name": "homebridge",
-            "username": "0E:CC:78:46:6E:6C",
-            "ipAddress": "192.168.86.28",
-            "port": 51424,
-            "services": [],
-            "connectionFailedCount": 0
-        },
-        "uniqueId": "2fa088a5e8adead127a4dfa18495491e066976446bf922ea9823e63aba9260d7"
     },
     {
         "aid": 55,
@@ -2164,7 +1923,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Active",
-                "value": 1,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2186,7 +1945,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Current Heater-Cooler State",
-                "value": 3,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2207,7 +1966,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Target Heater-Cooler State",
-                "value": 2,
+                "value": 1,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2229,7 +1988,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Current Temperature",
-                "value": 23.9,
+                "value": 22.8,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2251,7 +2010,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Cooling Threshold Temperature",
-                "value": 16.1,
+                "value": 30,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2274,7 +2033,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Heating Threshold Temperature",
-                "value": 16.1,
+                "value": 30,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2319,7 +2078,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Current Relative Humidity",
-                "value": 58,
+                "value": 38,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2341,7 +2100,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Swing Mode",
-                "value": 1,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2363,7 +2122,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Rotation Speed",
-                "value": 100,
+                "value": 33,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2386,7 +2145,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Filter Change Indication",
-                "value": 0,
+                "value": 1,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2407,7 +2166,7 @@
                 "serviceType": "HeaterCooler",
                 "serviceName": "kids room AC",
                 "description": "Filter Life Level",
-                "value": 32,
+                "value": 0,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2445,21 +2204,21 @@
             "Model": "skyv2",
             "Name": "kids room AC",
             "Serial Number": "392104963",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
-            "Active": 1,
-            "CurrentHeaterCoolerState": 3,
-            "TargetHeaterCoolerState": 2,
-            "CurrentTemperature": 23.9,
-            "CoolingThresholdTemperature": 16.1,
-            "HeatingThresholdTemperature": 16.1,
+            "Active": 0,
+            "CurrentHeaterCoolerState": 0,
+            "TargetHeaterCoolerState": 1,
+            "CurrentTemperature": 22.8,
+            "CoolingThresholdTemperature": 30,
+            "HeatingThresholdTemperature": 30,
             "TemperatureDisplayUnits": 1,
-            "CurrentRelativeHumidity": 58,
-            "SwingMode": 1,
-            "RotationSpeed": 100,
-            "FilterChangeIndication": 0,
-            "FilterLifeLevel": 32
+            "CurrentRelativeHumidity": 38,
+            "SwingMode": 0,
+            "RotationSpeed": 33,
+            "FilterChangeIndication": 1,
+            "FilterLifeLevel": 0
         },
         "instance": {
             "name": "homebridge",
@@ -2552,7 +2311,7 @@
                 "serviceType": "HumidifierDehumidifier",
                 "serviceName": "kids room Dry",
                 "description": "Current Relative Humidity",
-                "value": 58,
+                "value": 38,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2574,7 +2333,7 @@
                 "serviceType": "HumidifierDehumidifier",
                 "serviceName": "kids room Dry",
                 "description": "Swing Mode",
-                "value": 1,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2596,7 +2355,7 @@
                 "serviceType": "HumidifierDehumidifier",
                 "serviceName": "kids room Dry",
                 "description": "Rotation Speed",
-                "value": 100,
+                "value": 33,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2617,15 +2376,15 @@
             "Model": "skyv2",
             "Name": "kids room AC",
             "Serial Number": "392104963",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
             "Active": 0,
             "CurrentHumidifierDehumidifierState": 0,
             "TargetHumidifierDehumidifierState": 2,
-            "CurrentRelativeHumidity": 58,
-            "SwingMode": 1,
-            "RotationSpeed": 100
+            "CurrentRelativeHumidity": 38,
+            "SwingMode": 0,
+            "RotationSpeed": 33
         },
         "instance": {
             "name": "homebridge",
@@ -2653,7 +2412,7 @@
                 "serviceType": "HumiditySensor",
                 "serviceName": "kids room Humidity",
                 "description": "Current Relative Humidity",
-                "value": 58,
+                "value": 38,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2673,10 +2432,10 @@
             "Model": "skyv2_humidity",
             "Name": "kids room Humidity",
             "Serial Number": "392104963_humidity",
-            "Firmware Revision": "2.2.0"
+            "Firmware Revision": "2.3.4-release"
         },
         "values": {
-            "CurrentRelativeHumidity": 58
+            "CurrentRelativeHumidity": 38
         },
         "instance": {
             "name": "homebridge",
@@ -2704,7 +2463,7 @@
                 "serviceType": "Thermostat",
                 "serviceName": "KidsRoomThermostat",
                 "description": "Current Heating Cooling State",
-                "value": 2,
+                "value": 0,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2725,7 +2484,7 @@
                 "serviceType": "Thermostat",
                 "serviceName": "KidsRoomThermostat",
                 "description": "Target Heating Cooling State",
-                "value": 2,
+                "value": 1,
                 "format": "uint8",
                 "perms": [
                     "ev",
@@ -2747,7 +2506,7 @@
                 "serviceType": "Thermostat",
                 "serviceName": "KidsRoomThermostat",
                 "description": "Current Temperature",
-                "value": 23.9,
+                "value": 22.8,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2769,7 +2528,7 @@
                 "serviceType": "Thermostat",
                 "serviceName": "KidsRoomThermostat",
                 "description": "Target Temperature",
-                "value": 23.3,
+                "value": 21.1,
                 "format": "float",
                 "perms": [
                     "ev",
@@ -2815,10 +2574,10 @@
             "Firmware Revision": "6.3.0"
         },
         "values": {
-            "CurrentHeatingCoolingState": 2,
-            "TargetHeatingCoolingState": 2,
-            "CurrentTemperature": 23.9,
-            "TargetTemperature": 23.3,
+            "CurrentHeatingCoolingState": 0,
+            "TargetHeatingCoolingState": 1,
+            "CurrentTemperature": 22.8,
+            "TargetTemperature": 21.1,
             "TemperatureDisplayUnits": 1
         },
         "instance": {
@@ -2878,5 +2637,2626 @@
             "connectionFailedCount": 0
         },
         "uniqueId": "13cfb5e0429bd2fef1c4676735176c91ec429c30fcb3744c4d0e3b8fa98a580e"
+    },
+    {
+        "aid": 78,
+        "iid": 8,
+        "uuid": "00000043-0000-1000-8000-0026BB765291",
+        "type": "Lightbulb",
+        "humanType": "Lightbulb",
+        "serviceName": "Living Room TV Sync",
+        "serviceCharacteristics": [
+            {
+                "aid": 78,
+                "iid": 9,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Lightbulb",
+                "serviceName": "Living Room TV Sync",
+                "description": "On",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 78,
+                "iid": 10,
+                "uuid": "00000008-0000-1000-8000-0026BB765291",
+                "type": "Brightness",
+                "serviceType": "Lightbulb",
+                "serviceName": "Living Room TV Sync",
+                "description": "Brightness",
+                "value": 68,
+                "format": "int",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync",
+            "Serial Number": "C429960B8FBE",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "On": 1,
+            "Brightness": 68
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "8be48b5e5a99ee18543d4135edd78965e61ed1c161e3e9f8bb6e8afae8d232d0"
+    },
+    {
+        "aid": 80,
+        "iid": 8,
+        "uuid": "00000043-0000-1000-8000-0026BB765291",
+        "type": "Lightbulb",
+        "humanType": "Lightbulb",
+        "serviceName": "Time Of Day",
+        "serviceCharacteristics": [
+            {
+                "aid": 80,
+                "iid": 10,
+                "uuid": "00000025-0000-1000-8000-0026BB765291",
+                "type": "On",
+                "serviceType": "Lightbulb",
+                "serviceName": "Time Of Day",
+                "description": "On",
+                "value": 1,
+                "format": "bool",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 80,
+                "iid": 11,
+                "uuid": "00000008-0000-1000-8000-0026BB765291",
+                "type": "Brightness",
+                "serviceType": "Lightbulb",
+                "serviceName": "Time Of Day",
+                "description": "Brightness",
+                "value": 20,
+                "format": "int",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "percentage",
+                "maxValue": 100,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Default-Manufacturer",
+            "Model": "Default-Model",
+            "Name": "Time Of Day",
+            "Serial Number": "Default-SerialNumber",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "On": 1,
+            "Brightness": 20
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "4ded35aafc8db81f79db272f8834372bacd56af9d4d9323dcdfe8c34ebe7e053"
+    },
+    {
+        "aid": 82,
+        "iid": 8,
+        "uuid": "0000004A-0000-1000-8000-0026BB765291",
+        "type": "Thermostat",
+        "humanType": "Thermostat",
+        "serviceName": "BedRoomThermostat",
+        "serviceCharacteristics": [
+            {
+                "aid": 82,
+                "iid": 10,
+                "uuid": "0000000F-0000-1000-8000-0026BB765291",
+                "type": "CurrentHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "BedRoomThermostat",
+                "description": "Current Heating Cooling State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 82,
+                "iid": 11,
+                "uuid": "00000033-0000-1000-8000-0026BB765291",
+                "type": "TargetHeatingCoolingState",
+                "serviceType": "Thermostat",
+                "serviceName": "BedRoomThermostat",
+                "description": "Target Heating Cooling State",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 3,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 82,
+                "iid": 12,
+                "uuid": "00000011-0000-1000-8000-0026BB765291",
+                "type": "CurrentTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "BedRoomThermostat",
+                "description": "Current Temperature",
+                "value": 22.8,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "unit": "celsius",
+                "maxValue": 100,
+                "minValue": -270,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 82,
+                "iid": 13,
+                "uuid": "00000035-0000-1000-8000-0026BB765291",
+                "type": "TargetTemperature",
+                "serviceType": "Thermostat",
+                "serviceName": "BedRoomThermostat",
+                "description": "Target Temperature",
+                "value": 21.1,
+                "format": "float",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "unit": "celsius",
+                "maxValue": 38,
+                "minValue": 10,
+                "minStep": 0.1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 82,
+                "iid": 14,
+                "uuid": "00000036-0000-1000-8000-0026BB765291",
+                "type": "TemperatureDisplayUnits",
+                "serviceType": "Thermostat",
+                "serviceName": "BedRoomThermostat",
+                "description": "Temperature Display Units",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Bedroom",
+            "Model": "e-zone",
+            "Name": "BedRoomThermostat",
+            "Serial Number": "Bedroom",
+            "Firmware Revision": "6.3.0"
+        },
+        "values": {
+            "CurrentHeatingCoolingState": 0,
+            "TargetHeatingCoolingState": 1,
+            "CurrentTemperature": 22.8,
+            "TargetTemperature": 21.1,
+            "TemperatureDisplayUnits": 1
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:CC:78:46:6E:6C",
+            "ipAddress": "192.168.86.28",
+            "port": 51424,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "be4f6f6f887893a86cedd9dc925c5c33ba61a3975faa0afa0cf4afd562c62b4e"
+    },
+    {
+        "aid": 1,
+        "iid": 2000000008,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "homebridge-playstation 873F",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 9,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "homebridge-playstation 873F",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "homebridge.io",
+            "Model": "homebridge",
+            "Name": "homebridge-playstation 873F",
+            "Serial Number": "0E:8C:32:91:43:A2",
+            "Firmware Revision": "1.6.0"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "homebridge",
+            "username": "0E:8C:32:91:43:A2",
+            "ipAddress": "192.168.86.28",
+            "port": 30841,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "79b6ba86d84541e93ac3007f90de871de029a8701c6d4b7d604fdde8ac9ab68a"
+    },
+    {
+        "aid": 1,
+        "iid": 8,
+        "uuid": "000000D8-0000-1000-8000-0026BB765291",
+        "type": "Television",
+        "humanType": "Television",
+        "serviceName": "PS5-465 28C8",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 9,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "Television",
+                "serviceName": "PS5-465 28C8",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 10,
+                "uuid": "000000E7-0000-1000-8000-0026BB765291",
+                "type": "ActiveIdentifier",
+                "serviceType": "Television",
+                "serviceName": "PS5-465 28C8",
+                "description": "Active Identifier",
+                "value": 1,
+                "format": "uint32",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 11,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "Television",
+                "serviceName": "PS5-465 28C8",
+                "description": "Configured Name",
+                "value": "PS5-465",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 12,
+                "uuid": "000000E1-0000-1000-8000-0026BB765291",
+                "type": "RemoteKey",
+                "serviceType": "Television",
+                "serviceName": "PS5-465 28C8",
+                "description": "Remote Key",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 16,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            },
+            {
+                "aid": 1,
+                "iid": 13,
+                "uuid": "000000E8-0000-1000-8000-0026BB765291",
+                "type": "SleepDiscoveryMode",
+                "serviceType": "Television",
+                "serviceName": "PS5-465 28C8",
+                "description": "Sleep Discovery Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sony",
+            "Model": "PS5",
+            "Name": "PS5-465 28C8",
+            "Serial Number": "C84AA0572022",
+            "Firmware Revision": "06500010"
+        },
+        "values": {
+            "Active": 1,
+            "ActiveIdentifier": 1,
+            "ConfiguredName": "PS5-465",
+            "SleepDiscoveryMode": 1
+        },
+        "instance": {
+            "name": "PS5",
+            "username": "5F:AA:BE:5E:EE:97",
+            "ipAddress": "192.168.86.28",
+            "port": 35613,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "07624a763b0fe097032bdff968a53626a3c7c83f7ea97edd15253b8b0b39a786"
+    },
+    {
+        "aid": 1,
+        "iid": 14,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "PS5-465 28C8",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 15,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "PS5-465 28C8",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Sony",
+            "Model": "PS5",
+            "Name": "PS5-465 28C8",
+            "Serial Number": "C84AA0572022",
+            "Firmware Revision": "06500010"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "PS5",
+            "username": "5F:AA:BE:5E:EE:97",
+            "ipAddress": "192.168.86.28",
+            "port": 35613,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "ea06c8b496a153e5b6babeaf400f06af137947a29d37ab0a78d0b378225dddd2"
+    },
+    {
+        "aid": 1,
+        "iid": 8,
+        "uuid": "000000D8-0000-1000-8000-0026BB765291",
+        "type": "Television",
+        "humanType": "Television",
+        "serviceName": "Entertainment Area",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 10,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "Television",
+                "serviceName": "Entertainment Area",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 11,
+                "uuid": "000000E7-0000-1000-8000-0026BB765291",
+                "type": "ActiveIdentifier",
+                "serviceType": "Television",
+                "serviceName": "Entertainment Area",
+                "description": "Active Identifier",
+                "value": 2,
+                "format": "uint32",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 12,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "Television",
+                "serviceName": "Entertainment Area",
+                "description": "Configured Name",
+                "value": "Living Room Entertainment Area",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 13,
+                "uuid": "000000E1-0000-1000-8000-0026BB765291",
+                "type": "RemoteKey",
+                "serviceType": "Television",
+                "serviceName": "Entertainment Area",
+                "description": "Remote Key",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 16,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            },
+            {
+                "aid": 1,
+                "iid": 14,
+                "uuid": "000000E8-0000-1000-8000-0026BB765291",
+                "type": "SleepDiscoveryMode",
+                "serviceType": "Television",
+                "serviceName": "Entertainment Area",
+                "description": "Sleep Discovery Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync DBCA",
+            "Serial Number": "C429960B8FBE-E",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Active": 1,
+            "ActiveIdentifier": 2,
+            "ConfiguredName": "Living Room Entertainment Area",
+            "SleepDiscoveryMode": 1
+        },
+        "linked": [
+            15,
+            23
+        ],
+        "instance": {
+            "name": "Sync Box",
+            "username": "E6:8D:88:F7:38:66",
+            "ipAddress": "192.168.86.28",
+            "port": 37875,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "a12729ead71b4280f5455cee7e482be8e3f9a73c45c9decc90d8a28e37b68786"
+    },
+    {
+        "aid": 1,
+        "iid": 15,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "area1",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 17,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Configured Name",
+                "value": "Livingroom",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 18,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 19,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 20,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 21,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 22,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "area1",
+                "description": "Identifier",
+                "value": 1,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync DBCA",
+            "Serial Number": "C429960B8FBE-E",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Livingroom",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 1
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "E6:8D:88:F7:38:66",
+            "ipAddress": "192.168.86.28",
+            "port": 37875,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "2cb2de19526957c62d68d30446b4496792402d5c622d77d8807c78bcd20f9cfd"
+    },
+    {
+        "aid": 1,
+        "iid": 23,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "area2",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 25,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Configured Name",
+                "value": "TV",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 26,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 27,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 28,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 29,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 30,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "area2",
+                "description": "Identifier",
+                "value": 2,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync DBCA",
+            "Serial Number": "C429960B8FBE-E",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "TV",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 2
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "E6:8D:88:F7:38:66",
+            "ipAddress": "192.168.86.28",
+            "port": 37875,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "e94bb348316cd40b8e43f07ece3402cb489931c9e3cae7f878c7913d57f0c39b"
+    },
+    {
+        "aid": 1,
+        "iid": 31,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "Living Room TV Sync DBCA",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 32,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "Living Room TV Sync DBCA",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync DBCA",
+            "Serial Number": "C429960B8FBE-E",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "E6:8D:88:F7:38:66",
+            "ipAddress": "192.168.86.28",
+            "port": 37875,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "677e9a38c3772285f73f4c4e562b800ef0ca7b3d748c2ce66961bb3b7c9a4afb"
+    },
+    {
+        "aid": 1,
+        "iid": 8,
+        "uuid": "000000D8-0000-1000-8000-0026BB765291",
+        "type": "Television",
+        "humanType": "Television",
+        "serviceName": "Mode",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 10,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "Television",
+                "serviceName": "Mode",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 11,
+                "uuid": "000000E7-0000-1000-8000-0026BB765291",
+                "type": "ActiveIdentifier",
+                "serviceType": "Television",
+                "serviceName": "Mode",
+                "description": "Active Identifier",
+                "value": 1,
+                "format": "uint32",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 12,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "Television",
+                "serviceName": "Mode",
+                "description": "Configured Name",
+                "value": "Living Room Sync Mode",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 13,
+                "uuid": "000000E1-0000-1000-8000-0026BB765291",
+                "type": "RemoteKey",
+                "serviceType": "Television",
+                "serviceName": "Mode",
+                "description": "Remote Key",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 16,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            },
+            {
+                "aid": 1,
+                "iid": 14,
+                "uuid": "000000E8-0000-1000-8000-0026BB765291",
+                "type": "SleepDiscoveryMode",
+                "serviceType": "Television",
+                "serviceName": "Mode",
+                "description": "Sleep Discovery Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Active": 1,
+            "ActiveIdentifier": 1,
+            "ConfiguredName": "Living Room Sync Mode",
+            "SleepDiscoveryMode": 1
+        },
+        "linked": [
+            15,
+            23,
+            31,
+            39
+        ],
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "00bfd9af8f96e1b42d9841234f14a1f1b7d384894edde5b0cea6ea0a6302868b"
+    },
+    {
+        "aid": 1,
+        "iid": 15,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "mode1",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 17,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Configured Name",
+                "value": "Video",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 18,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 19,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 20,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 21,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 22,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "mode1",
+                "description": "Identifier",
+                "value": 1,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Video",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 1
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "3dffc2030a1c7e7c03ec6bbc2238259dae64c530d090763cdac71db3b0e1c0ec"
+    },
+    {
+        "aid": 1,
+        "iid": 23,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "mode2",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 25,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Configured Name",
+                "value": "Music",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 26,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 27,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 28,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 29,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 30,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "mode2",
+                "description": "Identifier",
+                "value": 2,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Music",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 2
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "346227179c21b9f680c25e727440e7019cb577fb443e42d232b8738d795b277a"
+    },
+    {
+        "aid": 1,
+        "iid": 31,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "mode3",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 33,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Configured Name",
+                "value": "Game",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 34,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 35,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 36,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 37,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 38,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "mode3",
+                "description": "Identifier",
+                "value": 3,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Game",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 3
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "0b5d5c49c06852ecc8dfd1664285c5d58db07bc4df9a9d8c140940bd2bdf5346"
+    },
+    {
+        "aid": 1,
+        "iid": 39,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "mode4",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 41,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Configured Name",
+                "value": "Passthrough",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 42,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 43,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 44,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 45,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 46,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "mode4",
+                "description": "Identifier",
+                "value": 4,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Passthrough",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 4
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "45993c833796a903b0c551a7ecca05873927496fb091f3014967158e6740b7df"
+    },
+    {
+        "aid": 1,
+        "iid": 47,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "Living Room TV Sync 6AF6",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 48,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "Living Room TV Sync 6AF6",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 6AF6",
+            "Serial Number": "C429960B8FBE-M",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "AB:02:7C:0B:1F:26",
+            "ipAddress": "192.168.86.28",
+            "port": 33075,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "93ba087d5f55e32e03199fbc6fe905ac1d2b1ba80c9d660e481ccd3703a3997d"
+    },
+    {
+        "aid": 1,
+        "iid": 8,
+        "uuid": "000000D8-0000-1000-8000-0026BB765291",
+        "type": "Television",
+        "humanType": "Television",
+        "serviceName": "Living Room TV Sync 958C",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 9,
+                "uuid": "000000B0-0000-1000-8000-0026BB765291",
+                "type": "Active",
+                "serviceType": "Television",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Active",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 10,
+                "uuid": "000000E7-0000-1000-8000-0026BB765291",
+                "type": "ActiveIdentifier",
+                "serviceType": "Television",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Active Identifier",
+                "value": 3,
+                "format": "uint32",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 11,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "Television",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Configured Name",
+                "value": "Living Room HDMI Switch",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 12,
+                "uuid": "000000E1-0000-1000-8000-0026BB765291",
+                "type": "RemoteKey",
+                "serviceType": "Television",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Remote Key",
+                "format": "uint8",
+                "perms": [
+                    "pw"
+                ],
+                "maxValue": 16,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": false,
+                "canWrite": true,
+                "ev": false
+            },
+            {
+                "aid": 1,
+                "iid": 13,
+                "uuid": "000000E8-0000-1000-8000-0026BB765291",
+                "type": "SleepDiscoveryMode",
+                "serviceType": "Television",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Sleep Discovery Mode",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Active": 1,
+            "ActiveIdentifier": 3,
+            "ConfiguredName": "Living Room HDMI Switch",
+            "SleepDiscoveryMode": 1
+        },
+        "linked": [
+            14,
+            22,
+            30,
+            38
+        ],
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "8cff8d0f52334d122edca9a4fb115a5530188e2a6ae1685ccde9c106b3836682"
+    },
+    {
+        "aid": 1,
+        "iid": 14,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "hdmi1",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 16,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Configured Name",
+                "value": "Apple TV",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 17,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 18,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 19,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 20,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 21,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi1",
+                "description": "Identifier",
+                "value": 1,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Apple TV",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 1
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "1ecd88ddd8ede56ec2638de22859c2888fb53ec1753a33a6b28f115ffd18dff1"
+    },
+    {
+        "aid": 1,
+        "iid": 22,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "hdmi2",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 24,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Configured Name",
+                "value": "Computer",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 25,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 26,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 27,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 28,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 29,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi2",
+                "description": "Identifier",
+                "value": 2,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Computer",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 2
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "b3efc6d022afe9420f4d453b1c4139e8954602027e99ff0ebcd317546197186f"
+    },
+    {
+        "aid": 1,
+        "iid": 30,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "hdmi3",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 32,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Configured Name",
+                "value": "Playstation",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 33,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 34,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 35,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 36,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 37,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi3",
+                "description": "Identifier",
+                "value": 3,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "Playstation",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 3
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "7b3d00760881ea4425f977cba43f36a45dae3b4d14da629863d447b7699085bd"
+    },
+    {
+        "aid": 1,
+        "iid": 38,
+        "uuid": "000000D9-0000-1000-8000-0026BB765291",
+        "type": "InputSource",
+        "humanType": "Input Source",
+        "serviceName": "hdmi4",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 40,
+                "uuid": "000000E3-0000-1000-8000-0026BB765291",
+                "type": "ConfiguredName",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Configured Name",
+                "value": "HDMI 4",
+                "format": "string",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 41,
+                "uuid": "000000DB-0000-1000-8000-0026BB765291",
+                "type": "InputSourceType",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Input Source Type",
+                "value": 3,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 10,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 42,
+                "uuid": "000000D6-0000-1000-8000-0026BB765291",
+                "type": "IsConfigured",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Is Configured",
+                "value": 1,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 43,
+                "uuid": "00000135-0000-1000-8000-0026BB765291",
+                "type": "CurrentVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Current Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": false,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 44,
+                "uuid": "00000134-0000-1000-8000-0026BB765291",
+                "type": "TargetVisibilityState",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Target Visibility State",
+                "value": 0,
+                "format": "uint8",
+                "perms": [
+                    "ev",
+                    "pr",
+                    "pw"
+                ],
+                "maxValue": 1,
+                "minValue": 0,
+                "minStep": 1,
+                "canRead": true,
+                "canWrite": true,
+                "ev": true
+            },
+            {
+                "aid": 1,
+                "iid": 45,
+                "uuid": "000000E6-0000-1000-8000-0026BB765291",
+                "type": "Identifier",
+                "serviceType": "InputSource",
+                "serviceName": "hdmi4",
+                "description": "Identifier",
+                "value": 4,
+                "format": "uint32",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "ConfiguredName": "HDMI 4",
+            "InputSourceType": 3,
+            "IsConfigured": 1,
+            "CurrentVisibilityState": 0,
+            "TargetVisibilityState": 0,
+            "Identifier": 4
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "ee142361f761051c5e4bb51cda5f885a10f1a9a41b4d1d783a828af158b8c6fd"
+    },
+    {
+        "aid": 1,
+        "iid": 46,
+        "uuid": "000000A2-0000-1000-8000-0026BB765291",
+        "type": "ProtocolInformation",
+        "humanType": "Protocol Information",
+        "serviceName": "Living Room TV Sync 958C",
+        "serviceCharacteristics": [
+            {
+                "aid": 1,
+                "iid": 47,
+                "uuid": "00000037-0000-1000-8000-0026BB765291",
+                "type": "Version",
+                "serviceType": "ProtocolInformation",
+                "serviceName": "Living Room TV Sync 958C",
+                "description": "Version",
+                "value": "1.1.0",
+                "format": "string",
+                "perms": [
+                    "pr"
+                ],
+                "canRead": true,
+                "canWrite": false,
+                "ev": false
+            }
+        ],
+        "accessoryInformation": {
+            "Manufacturer": "Philips",
+            "Model": "Sync Box",
+            "Name": "Living Room TV Sync 958C",
+            "Serial Number": "C429960B8FBE-T",
+            "Firmware Revision": "1.8.3"
+        },
+        "values": {
+            "Version": "1.1.0"
+        },
+        "instance": {
+            "name": "Sync Box",
+            "username": "73:6F:64:C3:1D:CC",
+            "ipAddress": "192.168.86.28",
+            "port": 43903,
+            "services": [],
+            "connectionFailedCount": 0
+        },
+        "uniqueId": "a52e9097b95125beb01fceefb81c2f7357772268e61518b6f33e885e15723f07"
     }
 ]

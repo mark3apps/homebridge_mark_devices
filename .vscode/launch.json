@@ -13,7 +13,7 @@
             "justMyCode": true,
             "args": [
                 "Get",
-                "Wynter",
+                "BedRoomThermostat",
                 "TargetHeatingCoolingState",
                 "-d"
             ]
@@ -27,13 +27,13 @@
             "justMyCode": true,
             "args": [
                 "Update",
-                "Wynter",
+                "BedRoomThermostat",
                 "Values",
                 "-d"
             ]
         },
         {
-            "name": "Update Server",
+            "name": "Update Service",
             "type": "python",
             "request": "launch",
             "program": "homebridge_mark_devices",
@@ -41,9 +41,34 @@
             "justMyCode": true,
             "args": [
                 "Update",
-                "Wynter",
+                "BedRoomThermostat",
                 "Service",
                 "-d"
+            ]
+        },
+        {
+            "name": "Get Apple TV Playing",
+            "type": "python",
+            "request": "launch",
+            "program": "homebridge_mark_devices",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "Get",
+                "LivingRoomAppleTV_Playing",
+                "On"
+            ]
+        },
+        {
+            "name": "Update Apple TV",
+            "type": "python",
+            "request": "launch",
+            "program": "homebridge_mark_devices",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "Update",
+                "LivingRoomAppleTV"
             ]
         },
         {
@@ -54,8 +79,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
-                "Schedule",
-                "-d"
+                "Schedule"
             ]
         }
     ]

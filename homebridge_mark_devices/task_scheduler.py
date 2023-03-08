@@ -1,10 +1,11 @@
 from argparse import Namespace
 import asyncio
 import logging
-import time
 import schedule
+import time
 import os
 import json
+from device_types.atv.atv_controller import ATVController
 from shared.c_enums import DeviceType
 from shared.globals import *
 from device_types.thermostat import thermostat_model
@@ -36,14 +37,12 @@ def update_values():
             match device_config["type"]:
                 case DeviceType.AIR_CONDITIONER:
                     device = thermostat_model.ThermostatModel(device_config["name"])
-                    results_hold = device.update_values()
+                    results = device.update_values()
+                case DeviceType.APPLE_TV:
+                    device = ATVController(device_config["name"])
+                    results = asyncio.run(device.update_values())
                 case _:
-                    results_hold = None
-
-            if results_hold != None:
-                results = asyncio.run(results_hold)
-            else:
-                results = False
+                    results = False
 
             logger.debug(
                 "Updated " + device_config["name"] + " with result: " + str(results)

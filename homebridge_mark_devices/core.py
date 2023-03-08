@@ -1,6 +1,8 @@
 # Internal Modules
 
+import asyncio
 from device_types import device_model
+from device_types.atv.atv_controller import ATVController
 from shared.c_enums import DeviceType
 from shared.globals import *
 from device_types.thermostat import (
@@ -10,13 +12,17 @@ from device_types.thermostat import (
 )
 
 # External Modules
-import os
 import logging
 
 
-async def main(io: str, device_name: str, characteristic: str, option: str):
+def main(io: str, device_name: str, characteristic: str, option: str):
 
-    device_type = DeviceType(device_model.getType(device_name))
+    device_name_split = device_name.split("_")
+
+    if len(device_name_split) == 1:
+        device_type = DeviceType(device_model.getType(device_name))
+    else:
+        device_type = DeviceType(device_model.getType(device_name_split[0]))
 
     logging.debug("Device type: " + str(device_type))
 
@@ -39,16 +45,28 @@ async def main(io: str, device_name: str, characteristic: str, option: str):
                     result = None
 
         case DeviceType.APPLE_TV:
-            device_path = os.path.join(
-                BASE_PATH, "data", "devices", f"{device_name}.device"
-            )
-            result = None
+
+            device = ATVController(device_name_split[0])
+
+            match io:
+                case "Get":
+                    result = device.get(device_name_split[1])
+                case "Update":
+                    result = None
+                    asyncio.run(device.update_values())
+                case _:
+                    result = None
+
+            # if device.atv != None:
+            # closed = device.atv.close()
+
+            return result
 
         case _:
             logging.debug("Unknown device type")
             result = None
 
     if result != None:
-        return str(await result)
+        return str(result)
 
     return None

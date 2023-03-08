@@ -3,5 +3,6 @@
         "creds",
         "pyatv",
         "Wynter"
-    ]
+    ],
+    "python.formatting.provider": "autopep8"
 }

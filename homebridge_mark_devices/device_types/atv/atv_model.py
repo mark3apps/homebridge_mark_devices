@@ -12,26 +12,42 @@ class ATVCred(typing.TypedDict):
 class ATVCreds(typing.TypedDict):
     airplay: str
     companion: str
+    mrp: str
 
 
 class ATVConfig(DeviceConfig):
-    on: bool
-    playing: bool
+    device_state: int
     media_type: int
+    title: str
     id: str
-    crendentials: ATVCreds
+    credentials: ATVCreds
 
 
 class ATVModel(DeviceModel):
     def __init__(self, name: str):
         super().__init__(name)
-        self._config = typing.cast(ATVConfig, self._config)
+
+    @property
+    def config(self):
+        if self._config == None:
+            self._config = self.load_config()
+
+        return self._config
+
+    def load_config(self):
+        return typing.cast(ATVConfig, self._load_config())
+
+    @config.setter
+    def config(self, value: ATVConfig):
+        self._config = value
+        self.save_config()
 
     @property
     def id(self) -> str:
-        return self._config["id"]
+        return self.config["id"]
 
     @id.setter
     def id(self, value):
-        self._config["id"] = value
-        self.save_config()
+        config = self.config
+        config["id"] = value
+        self.config = config

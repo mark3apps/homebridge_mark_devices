@@ -1,7 +1,7 @@
 {
     "platform": "Cmd4",
     "name": "Cmd4",
-    "debug": true,
+    "debug": false,
     "interval": 8,
     "timeout": 12000,
     "stateChangeResponseTime": 3,
@@ -19,53 +19,34 @@
         {
             "type": "Switch",
             "displayName": "Kids are Home",
-            "queue": "A",
+            "queue": "ThermostatQueue",
             "on": "FALSE"
         },
         {
             "type": "Switch",
             "displayName": "Kids in Bed",
-            "queue": "A",
+            "queue": "ThermostatQueue",
             "on": "FALSE"
         },
         {
-            "type": "Switch",
-            "displayName": "Bed Room TV Playing",
-            "queue": "A",
-            "on": "FALSE"
-        },
-        {
-            "type": "Switch",
-            "displayName": "Bed Room TV Power",
-            "queue": "A",
-            "on": "FALSE"
-        },
-        {
-            "type": "Switch",
-            "displayName": "Living Room TV Playing",
-            "queue": "A",
-            "on": "FALSE"
-        },
-        {
-            "type": "Switch",
-            "displayName": "Living Room TV Power",
-            "queue": "A",
-            "on": "FALSE"
+            "type": "Lightbulb",
+            "displayName": "Time Of Day",
+            "queue": "ThermostatQueue",
+            "on": "0",
+            "brightness": 50
         },
         {
             "type": "Thermostat",
-            "displayName": "Wynter",
-            "name": "Wynter",
-            "currentHeatingCoolingState": 0,
-            "targetHeatingCoolingState": 0,
+            "displayName": "BedRoomThermostat",
+            "name": "BedRoomThermostat",
+            "currentHeatingCoolingState": "OFF",
+            "targetHeatingCoolingState": "OFF",
             "currentTemperature": 25,
             "targetTemperature": 25,
-            "temperatureDisplayUnits": 1,
-            "coolingThresholdTemperature": 22,
-            "heatingThresholdTemperature": 25,
-            "manufacturer": "Wynter",
+            "temperatureDisplayUnits": "FAHRENHEIT",
+            "manufacturer": "Bedroom",
             "model": "e-zone",
-            "serialNumber": "Wynter e-zone2",
+            "serialNumber": "Bedroom",
             "queue": "ThermostatQueue",
             "polling": [
                 {

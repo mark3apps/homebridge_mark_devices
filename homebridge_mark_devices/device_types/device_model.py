@@ -1,6 +1,7 @@
 import logging
 import os
 import json
+import time
 import typing
 
 from shared import c_enums
@@ -29,8 +30,22 @@ class DeviceModel:
         self.save_config()
 
     def _load_config(self):
-        with open(self._config_path, "r") as f:
-            return json.load(f)
+        while True:
+            with open(self._config_path, "r") as f:
+                if f == None or f == "":
+                    config = None
+                else:
+                    config = json.load(f)
+
+            if config != None:
+                break
+            else:
+                logging.debug(
+                    "Waiting for config to be created for " + self._config_path
+                )
+                time.sleep(1)
+
+        return config
 
     def save_config(self):
         with open(self._config_path, "w") as f:
@@ -40,10 +55,20 @@ class DeviceModel:
 
 # Load Homebridge device config values by name
 def getType(name: str):
-    with open(
-        os.path.join(BASE_PATH, "data", "devices", f"{name}.json"),
-        "r",
-    ) as f:
-        config = typing.cast(DeviceConfig, json.load(f))
+    while True:
+        with open(
+            os.path.join(BASE_PATH, "data", "devices", f"{name}.json"),
+            "r",
+        ) as f:
+            if f == None or f == "":
+                config = None
+            else:
+                config = typing.cast(DeviceConfig, json.load(f))
+
+        if config != None:
+            break
+        else:
+            logging.debug("Waiting for config to be created for " + name)
+            time.sleep(1)
 
     return config["type"]
