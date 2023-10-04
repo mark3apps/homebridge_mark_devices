@@ -1,8 +1,6 @@
 # Internal Modules
 
-import asyncio
 from device_types import device_model
-from device_types.atv.atv_controller import ATVController
 from shared.c_enums import DeviceType
 from shared.globals import *
 from device_types.thermostat import (
@@ -33,7 +31,8 @@ def main(io: str, device_name: str, characteristic: str, option: str):
                     device = thermostat_view.ThermostatView(device_name)
                     result = device.get(characteristic)
                 case "Set":
-                    device = thermostat_controller.ThermostatController(device_name)
+                    device = thermostat_controller.ThermostatController(
+                        device_name)
                     result = device.set(characteristic, option)
                 case "Update":
                     device = thermostat_model.ThermostatModel(device_name)
@@ -43,24 +42,6 @@ def main(io: str, device_name: str, characteristic: str, option: str):
                         result = device.update_values()
                 case _:
                     result = None
-
-        case DeviceType.APPLE_TV:
-
-            device = ATVController(device_name_split[0])
-
-            match io:
-                case "Get":
-                    result = device.get(device_name_split[1])
-                case "Update":
-                    result = None
-                    asyncio.run(device.update_values())
-                case _:
-                    result = None
-
-            # if device.atv != None:
-            # closed = device.atv.close()
-
-            return result
 
         case _:
             logging.debug("Unknown device type")

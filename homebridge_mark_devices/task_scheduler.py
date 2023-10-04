@@ -1,11 +1,9 @@
 from argparse import Namespace
-import asyncio
 import logging
 import schedule
 import time
 import os
 import json
-from device_types.atv.atv_controller import ATVController
 from shared.c_enums import DeviceType
 from shared.globals import *
 from device_types.thermostat import thermostat_model
@@ -30,26 +28,23 @@ def update_values():
     # Iterate through each device and update them
     for device_config in config["devices"]:
         try:
-            logger.debug("")
-            logger.debug("Updating device: " + device_config["name"])
 
             # Get device
             match device_config["type"]:
                 case DeviceType.AIR_CONDITIONER:
-                    device = thermostat_model.ThermostatModel(device_config["name"])
+                    device = thermostat_model.ThermostatModel(
+                        device_config["name"])
                     results = device.update_values()
-                case DeviceType.APPLE_TV:
-                    device = ATVController(device_config["name"])
-                    results = asyncio.run(device.update_values())
                 case _:
                     results = False
 
-            logger.debug(
-                "Updated " + device_config["name"] + " with result: " + str(results)
+            logger.info(
+                "Updated Values for Device: " + device_config["name"] +
+                " with result: " + str(results)
             )
-            logger.debug("")
         except Exception as e:
-            logger.error("Error updating " + device_config["name"] + ": " + str(e))
+            logger.error("Failed updating " +
+                         device_config["name"] + ": " + str(e))
 
 
 def update_services():
@@ -60,35 +55,38 @@ def update_services():
     # Iterate through each device and update them
     for device_config in config["devices"]:
         try:
-            logger.debug("")
-            logger.debug("Updating Service for device: " + device_config["name"])
 
             # Get device
             match device_config["type"]:
                 case DeviceType.AIR_CONDITIONER:
-                    device = thermostat_model.ThermostatModel(device_config["name"])
+                    device = thermostat_model.ThermostatModel(
+                        device_config["name"])
                     results_hold = device.update_service()
                 case _:
                     results_hold = None
 
-            if results_hold != None:
-                results = asyncio.run(results_hold)
-            else:
+            # Check if results hold is not a boolean
+            if results_hold == None:
                 results = False
+            else:
+                results = results_hold
 
-            logger.debug(
-                "Updated " + device_config["name"] + " with result: " + str(results)
+            logger.info(
+                "Updated Service for Device: " + device_config["name"] +
+                " with result: " + str(results)
             )
-            logger.debug("")
         except Exception as e:
-            logger.error("Error updating " + device_config["name"] + ": " + str(e))
+            logger.error("Failed updating " +
+                         device_config["name"] + ": " + str(e))
 
 
 def start(args: Namespace):
-    schedule.every(4).seconds.do(update_values)
-    schedule.every(8).seconds.do(update_services)
+    schedule.every(2).seconds.do(update_values)
+    time.sleep(1)
+    schedule.every(4).seconds.do(update_services)
 
     while True:
-        logger.debug("Running pending tasks")
+        logger.info("")
+        logger.info("Running pending tasks")
         schedule.run_pending()
-        time.sleep(4)
+        time.sleep(1)

@@ -50,7 +50,11 @@ def main():
         )
 
     else:
-        logging.basicConfig(level=logging.INFO)
+        logging.basicConfig(
+            level=logging.INFO,
+            format="%(asctime)s %(name)s %(levelname)s %(message)s",
+            datefmt="%H:%M:%S",
+        )
 
     logger = logging.getLogger(__name__)
     logger.debug("debug mode enabled")
@@ -63,7 +67,8 @@ def main():
     if args.io != "Schedule":
         logger.debug("Running Once")
 
-        result = core.main(args.io, args.device_name, args.characteristic, args.option)
+        result = core.main(args.io, args.device_name,
+                           args.characteristic, args.option)
 
         if result != None:
             print(result)
