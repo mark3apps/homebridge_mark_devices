@@ -293,7 +293,7 @@ class ThermostatModel(DeviceModel):
             logging.debug("high Temp Matches Target: " +
                           str(str(self.high_temp) == str(self.heater_cooler_temperature)))
             logging.debug("Heater Cooler Active == On: " +
-                          str(heater_cooler_active == SwitchState.ON))
+                          str(heater_cooler_active))
 
             if self.thermostat_target_state == ThermostatState.OFF and heater_cooler_active == Active.YES:  # Off
                 self.heater_cooler_active = Active.NO
@@ -312,15 +312,16 @@ class ThermostatModel(DeviceModel):
                 # Temp is too High and Heat is on, Turn Heat off
                 if (
                     target_temperature < current_temperature
-                    and heater_cooler_active != Active.NO
+                    and heater_cooler_active == Active.YES
                 ):
-                    heater_cooler_active = Active.NO
+                    self.heater_cooler_active = Active.NO
                     logging.debug("Turning off; Temp is too high")
 
                 # Temp is too Low and temp is not Low_temp, Turn Heat on
                 if (
                     target_temperature - 0.25
                 ) > current_temperature and heater_cooler_active != Active.YES:
+
                     self.heater_cooler_active = Active.YES
                     logging.debug("Turning on; Temp is too low")
 
